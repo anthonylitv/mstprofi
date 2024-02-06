@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --text-color: rgb(255, 184, 51);
+    --text-color: #e87d25;
 }
 
 * {
@@ -120,8 +120,93 @@ body {
 }
 
 .slider {
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    .hover-slider {
+        width: 100vw;
+        height: 90vh;
+        overflow: hidden;
+
+        &__item {
+            position: absolute;
+            width: 106vw;
+            height: 96vh;
+            top: -4vh;
+            left: -4vw;
+            opacity: 0;
+            transition: 0.6s linear;
+            transform: translate(-4vh);
+            pointer-events: none;
+
+            &-information {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.6);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                &-h1 {
+                    font-size: 50px;
+                    letter-spacing: 1px;
+                }
+
+                &-p {
+                    font-size: 15px;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &--active {
+                opacity: 1;
+                transform: translate(0);
+                pointer-events: auto;
+            }
+        }
+    }
+
+    .hover-slider-buttons {
+        position: absolute;
+        left: 2%;
+        right: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            border: none;
+            background-color: var(--text-color);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: ease-in-out 0.3s;
+            cursor: pointer;
+
+            svg {
+                width: 14px;
+                transition: ease-in-out 0.3s;
+            }
+
+            &:hover {
+                background-color: #000;
+                svg {
+                    fill: var(--text-color);
+                }
+            }
+        }
+    }
 
     .hover-slider-nav {
         z-index: 5;
@@ -144,36 +229,6 @@ body {
             &--active,
             &:hover {
                 background-color: var(--text-color);
-            }
-        }
-    }
-
-    .hover-slider {
-        position: relative;
-        width: 100vw;
-        height: 90vh;
-        overflow: hidden;
-        background-color: #000;
-
-        &__item {
-            position: absolute;
-            width: 104vw;
-            height: 94vh;
-            top: -2vh;
-            left: -2vw;
-            //opacity: 0;
-            transition: 2s;
-            transform: translate(-2vh);
-
-            &-img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &--active {
-                opacity: 1;
-                transform: translateY(0);
             }
         }
     }
