@@ -49,6 +49,7 @@ navItems.forEach((item, index) => {
 
     item.addEventListener('click', () => {
         toggleActivity(item.dataset.index)
+        customClearInterval()
     })
 })
 
@@ -74,6 +75,8 @@ arrowLeft.addEventListener('click', () => {
     } else {
         toggleActivity(sliderItems.length - 1)
     }
+
+    customClearInterval()
 })
 
 arrowRight.addEventListener('click', () => {
@@ -86,8 +89,17 @@ arrowRight.addEventListener('click', () => {
     } else {
         toggleActivity(0)
     }
+
+    customClearInterval()
 })
 
-setInterval(() => {
+let interval = setInterval(() => {
     arrowRight.click()
 }, 6000)
+
+function customClearInterval() {
+    clearInterval(interval)
+    interval = setInterval(() => {
+        arrowRight.click()
+    }, 6000)
+}
