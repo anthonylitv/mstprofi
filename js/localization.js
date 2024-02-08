@@ -25,6 +25,24 @@ const homeTexts = {
         ua: 'Послуги',
         ru: 'Услуги',
     },
+    'hover-slider__item-information-h1-1': {
+        pl: 'SZUKAĆ PRACY?',
+        en: 'LOOKING FOR A JOB?',
+        ua: 'В ПОШУКАХ РОБОТИ?',
+        ru: 'В ПОИСКАХ РАБОТЫ?',
+    },
+    'hover-slider__item-information-h1-2': {
+        pl: 'SZUKASZ PRACOWNIKÓW?',
+        en: 'LOOKING FOR EMPLOYEES?',
+        ua: 'В ПОШУКАХ ПРАЦІВНИКІВ?',
+        ru: 'В ПОИСКАХ РАБОТНИКОВ?',
+    },
+    'hover-slider__item-information-h1-3': {
+        pl: 'OFICJALNE ZATRUDNIENIE',
+        en: 'OFFICIAL EMPLOYMENT',
+        ua: 'ОФІЦІЙНЕ ПРАЦЕВЛАШТУВАННЯ',
+        ru: 'ОФИЦИАЛЬНОЕ ТРУДОУСТРОЙСТВО',
+    },
 }
 
 // Checking the site page path

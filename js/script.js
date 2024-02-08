@@ -66,20 +66,20 @@ function toggleActivity(index) {
 }
 
 arrowLeft.addEventListener('click', () => {
-    const currentIndex = Number(
-        document.querySelector('.hover-slider__item--active').dataset.index
-    )
-
-    if (currentIndex !== 0) {
-        toggleActivity(currentIndex - 1)
-    } else {
-        toggleActivity(sliderItems.length - 1)
-    }
-
+    clickArrowLeft()
     customClearInterval()
 })
 
 arrowRight.addEventListener('click', () => {
+    clickArrowRight()
+    customClearInterval()
+})
+
+let interval = setInterval(() => {
+    clickArrowRight()
+}, 7000)
+
+function clickArrowRight() {
     const currentIndex = Number(
         document.querySelector('.hover-slider__item--active').dataset.index
     )
@@ -89,17 +89,23 @@ arrowRight.addEventListener('click', () => {
     } else {
         toggleActivity(0)
     }
+}
 
-    customClearInterval()
-})
+function clickArrowLeft() {
+    const currentIndex = Number(
+        document.querySelector('.hover-slider__item--active').dataset.index
+    )
 
-let interval = setInterval(() => {
-    arrowRight.click()
-}, 6000)
+    if (currentIndex !== 0) {
+        toggleActivity(currentIndex - 1)
+    } else {
+        toggleActivity(sliderItems.length - 1)
+    }
+}
 
 function customClearInterval() {
     clearInterval(interval)
     interval = setInterval(() => {
-        arrowRight.click()
-    }, 6000)
+        clickArrowRight()
+    }, 9000)
 }
