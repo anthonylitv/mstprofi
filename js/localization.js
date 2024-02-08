@@ -43,6 +43,30 @@ const homeTexts = {
         ua: 'ОФІЦІЙНЕ ПРАЦЕВЛАШТУВАННЯ',
         ru: 'ОФИЦИАЛЬНОЕ ТРУДОУСТРОЙСТВО',
     },
+    'hover-slider__item-information-p-1': {
+        pl: 'Pracujemy w wielu regionach Polski',
+        en: 'We work in many regions of Poland',
+        ua: 'Працюємо в багатьох регіонах Польщі',
+        ru: 'Работаем во многих регионах Польши',
+    },
+    'hover-slider__item-information-p-2': {
+        pl: 'Najczęściej spotykane zawody: spawacz, monter, ślusarz, malarz',
+        en: 'The most common jobs: welder, fitter, locksmith, painter',
+        ua: 'Найпоширеніші вакансії: зварювальник, монтер, слюсар, маляр',
+        ru: 'Самые распространенные вакансии: сварщик, монтер, слесарь, маляр',
+    },
+    'hover-slider__item-information-p-3': {
+        pl: 'Szybkie i wysokiej jakości przetwarzanie dokumentów do legalnego pobytu i pracy w Polsce',
+        en: 'Fast and high-quality processing of documents for legal stay and work in Poland',
+        ua: 'Швидке і якісне оформлення документів для легального перебування і праці на території Польщі',
+        ru: 'Быстрое и качественное оформление документов для легального пребывания и труда на территории Польши',
+    },
+    'get-vacancy-button': {
+        pl: 'Zdobądź pracę!',
+        en: 'Get jobs!',
+        ua: 'Отримати вакансії!',
+        ru: 'Получить вакансии!',
+    },
 }
 
 // Checking the site page path
@@ -61,10 +85,10 @@ checkPagePathName()
 // Changing the language of texts
 function changeLang() {
     for (const key in currentTexts) {
-        let elem = document.querySelector(`[data-lang=${key}]`)
-        if (elem) {
-            elem.textContent = currentTexts[key][currentLang]
-        }
+        let elem = document.querySelectorAll(`[data-lang=${key}]`)
+        elem.forEach(item => {
+            item && (item.textContent = currentTexts[key][currentLang])
+        })
     }
 }
 changeLang()

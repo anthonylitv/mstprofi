@@ -77,7 +77,7 @@ arrowRight.addEventListener('click', () => {
 
 let interval = setInterval(() => {
     clickArrowRight()
-}, 7000)
+}, 9000)
 
 function clickArrowRight() {
     const currentIndex = Number(
