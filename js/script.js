@@ -110,7 +110,7 @@ function customClearInterval() {
     }, 9000)
 }
 
-//Modal
+//Modal//Modal//Modal//Modal//Modal//Modal//Modal
 
 const certificats = document.querySelectorAll('.certificats__img')
 const modal = document.querySelector('.modal')
@@ -139,3 +139,17 @@ modal.addEventListener('click', event => {
         closeModal()
     }
 })
+
+//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', event => {
+        event.preventDefault()
+        const blockId = anchor.getAttribute('href')
+        document
+            .querySelector(blockId)
+            .scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+}
