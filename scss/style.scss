@@ -42,6 +42,37 @@ p {
     font-size: 20px;
 }
 
+.modal {
+    content: '';
+    z-index: 100;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    &.active {
+        display: flex;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        width: 25px;
+        transition: 0.3s;
+        fill: white;
+        &:hover {
+            fill: gray;
+        }
+    }
+}
+
 .get-vacancy-button {
     position: relative;
     font-size: 1em;
@@ -331,8 +362,7 @@ p {
             color: black;
 
             &-h2 {
-                font-size: 42px;
-                font-weight: 600;
+                margin-bottom: 0;
                 &::after {
                     content: '';
                     background-color: black;
@@ -384,6 +414,98 @@ p {
             &-text {
                 line-height: 2;
             }
+        }
+    }
+}
+
+.certificats {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .certificats__img {
+            max-width: 580px;
+            cursor: pointer;
+        }
+    }
+
+    .certificats-modal {
+        &__img {
+            width: 900px;
+        }
+    }
+}
+
+.our-services {
+    // .our-services__h2
+
+    &__h2 {
+        text-align: center;
+    }
+
+    .our-services-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        &__item {
+            padding: 30px 30px 40px;
+            background-color: var(--text-color);
+            color: black;
+            border-radius: 8px;
+            flex-basis: 33%;
+            cursor: pointer;
+
+            &-h4 {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 1.3;
+            }
+
+            // .our-services-cards__item-p
+
+            &-p {
+                font-weight: 300;
+                margin: 20px 0;
+                line-height: 1.55;
+            }
+
+            // .our-services-cards__item-button
+
+            &-button {
+                font-weight: 800;
+                font-size: 19px;
+                &::after {
+                    content: '⮕';
+                    display: inline-block;
+                    margin-left: 10px;
+                    transition: transform 0.3s;
+                }
+            }
+
+            &:hover {
+                background-color: rgb(236, 141, 47);
+
+                & ::after {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+.countries {
+    &__h2 {
+        text-align: center;
+    }
+
+    .countries-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        img {
+            max-width: 140px;
         }
     }
 }

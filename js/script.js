@@ -109,3 +109,33 @@ function customClearInterval() {
         clickArrowRight()
     }, 9000)
 }
+
+//Modal
+
+const certificats = document.querySelectorAll('.certificats__img')
+const modal = document.querySelector('.modal')
+const modalImage = document.querySelector('.certificats-modal__img')
+const modalInner = document.querySelector('.modal__inner')
+
+function openModal() {
+    modal.classList.add('active')
+    document.body.style.overflow = 'hidden'
+}
+
+function closeModal() {
+    modal.classList.remove('active')
+    document.body.style.overflow = 'visible'
+}
+
+certificats.forEach(item => {
+    item.addEventListener('click', event => {
+        openModal()
+        modalImage.src = event.target.src
+    })
+})
+
+modal.addEventListener('click', event => {
+    if (!event.target.classList.contains('modal__inner')) {
+        closeModal()
+    }
+})
