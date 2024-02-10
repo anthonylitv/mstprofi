@@ -4,10 +4,9 @@ window.onbeforeunload = function () {
 
 //Language select//Language select//Language select//Language select//Language select//Language select//Language select
 
-const isSelectShow = document.querySelector('.header-language__items')
 const select = document.querySelector('.header-language')
 const selectItems = document.querySelectorAll('.header-language__item')
-const selectedItem = document.querySelector('.header-language__selected')
+const selectedItem = document.querySelector('.header-language__main-selected')
 
 selectedItem.textContent = (
     localStorage.getItem('language') ||
@@ -17,9 +16,9 @@ selectedItem.textContent = (
 
 window.addEventListener('click', event => {
     if (!select.contains(event.target)) {
-        isSelectShow.classList.remove('open')
+        select.classList.remove('open')
     } else {
-        isSelectShow.classList.toggle('open')
+        select.classList.toggle('open')
     }
 })
 
