@@ -46,24 +46,23 @@ for (let anchor of anchors) {
     })
 }
 //Burger//Burger//Burger//Burger//Burger//Burger
-
-const burger = document.querySelector('.header__burger')
 const navigation = document.querySelector('.navigation')
+const burger = document.querySelector('.header__burger')
 
 function isNavigationShown() {
-    navigation.classList.toggle('active')
     burger.classList.toggle('active')
+    navigation.classList.toggle('active')
     document.body.classList.toggle('lock')
 }
 
 burger.addEventListener('click', isNavigationShown)
 
-anchors.forEach(anchor => {
-    anchor.addEventListener('click', isNavigationShown)
-})
-
 navigation.addEventListener('click', event => {
-    if (event.target === navigation) {
+    const isAnchor = event.target.getAttribute('href')?.startsWith('#')
+    const isFon = event.target === navigation
+    const isBurgerOpen = burger.classList.contains('active')
+
+    if (isBurgerOpen && (isAnchor || isFon)) {
         isNavigationShown()
     }
 })
