@@ -11,10 +11,10 @@
 }
 
 body {
+  font-size: 16px;
   background-color: black;
   color: var(--text-color);
   font-family: "Inter", sans-serif;
-  font-size: 16px;
 }
 
 .container {
@@ -27,7 +27,11 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: calc(
+            30px +
+                18 *
+                ((100vw - 320px) / 1360)
+        );
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -105,7 +109,7 @@ p {
 
 .header {
   border-bottom: 1px solid var(--text-color);
-  padding: 20px 0;
+  padding: 20px 30px;
 }
 .header .header-container {
   max-width: 1500px;
@@ -446,7 +450,7 @@ p {
 }
 
 .forma {
-  background-image: url(/images/forma.jpg);
+  background-image: url("/images/forma.jpg");
   background-size: cover;
   background-position: center;
   padding: 100px 0;

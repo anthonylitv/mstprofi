@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0)
+}
+
 //Language select//Language select//Language select//Language select//Language select//Language select//Language select
 
 const isSelectShow = document.querySelector('.header-language__items')

@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+$maxWidth: 1680;
+$maxWidthContainer: 1;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type == 1 {
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(
+                #{$minSize + px} + #{$addSize} *
+                    ((100vw - 320px) / #{$maxWidthContainer - 320})
+            );
+        }
+    } @else {
+        #{$property}: calc(
+            #{$minSize +
+                px} +
+                #{$addSize} *
+                ((100vw - 320px) / #{$maxWidth - 320})
+        );
+    }
+}
+
 :root {
     --text-color: #e87d25;
 }
@@ -11,10 +35,10 @@
 }
 
 body {
+    font-size: 16px;
     background-color: black;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
 }
 
 .container {
@@ -27,7 +51,7 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    @include adaptiv-value('font-size', 48, 30, 0);
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -111,7 +135,7 @@ p {
 
 .header {
     border-bottom: 1px solid var(--text-color);
-    padding: 20px 0;
+    padding: 20px 30px;
     .header-container {
         max-width: 1500px;
         margin: 0 auto;
@@ -512,7 +536,7 @@ p {
 }
 
 .forma {
-    background-image: url(/images/forma.jpg);
+    background-image: url('/images/forma.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 0;
