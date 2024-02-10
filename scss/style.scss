@@ -140,7 +140,7 @@ p {
 .header-language {
     cursor: pointer;
     position: relative;
-    z-index: 15;
+
     justify-self: end;
 
     &__main {
@@ -156,8 +156,8 @@ p {
     }
 
     .header-language__items {
-        display: none;
         position: absolute;
+        display: none;
         margin-top: 5px;
         background-color: #000;
 
@@ -292,6 +292,7 @@ p {
                     background-color: var(--text-color);
                     left: 0;
                     top: 9px;
+                    transition: all 0.3s ease;
                 }
 
                 &::after,
@@ -302,6 +303,7 @@ p {
                     height: 2px;
                     background-color: var(--text-color);
                     left: 0;
+                    transition: all 0.3s ease;
                 }
 
                 &::after {
@@ -310,6 +312,21 @@ p {
 
                 &::before {
                     top: 0;
+                }
+
+                &.active {
+                    &::before {
+                        transform: rotate(45deg);
+                        top: 9px;
+                    }
+                    &::after {
+                        transform: rotate(-45deg);
+                        bottom: 9px;
+                    }
+
+                    span {
+                        transform: scale(0);
+                    }
                 }
             }
             .header-language {
@@ -337,13 +354,17 @@ p {
 
     .header-language {
         display: none;
+
+        &__items {
+            height: 300px;
+        }
     }
 
     @media (max-width: 767px) {
         position: fixed;
         top: -100%;
         left: 0;
-        padding-top: 50px;
+        padding-top: 30px;
         z-index: 100;
         height: 100%;
         width: 100%;
