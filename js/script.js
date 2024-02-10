@@ -31,15 +31,41 @@ selects.forEach(select => {
     })
 })
 
+//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', event => {
+        event.preventDefault()
+
+        const blockId = anchor.getAttribute('href')
+        document
+            .querySelector(blockId)
+            .scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+}
 //Burger//Burger//Burger//Burger//Burger//Burger
+
 const burger = document.querySelector('.header__burger')
 const navigation = document.querySelector('.navigation')
 
-burger.addEventListener('click', () => {
+function isNavigationShown() {
     navigation.classList.toggle('active')
     burger.classList.toggle('active')
-
     document.body.classList.toggle('lock')
+}
+
+burger.addEventListener('click', isNavigationShown)
+
+anchors.forEach(anchor => {
+    anchor.addEventListener('click', isNavigationShown)
+})
+
+navigation.addEventListener('click', event => {
+    if (event.target === navigation) {
+        isNavigationShown()
+    }
 })
 
 //Slider//Slider//Slider//Slider//Slider//Slider//Slider//Slider
@@ -156,17 +182,3 @@ modal.addEventListener('click', event => {
         closeModal()
     }
 })
-
-//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors//Anchors
-
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-    anchor.addEventListener('click', event => {
-        event.preventDefault()
-        const blockId = anchor.getAttribute('href')
-        document
-            .querySelector(blockId)
-            .scrollIntoView({ behavior: 'smooth', block: 'start' })
-    })
-}
