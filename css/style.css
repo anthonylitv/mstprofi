@@ -115,87 +115,112 @@ p {
 .header .header-container {
   max-width: 1500px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
   align-items: center;
-  justify-content: space-between;
 }
 .header .header-container .header-logo {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 .header .header-container .header-logo .header-logo__image {
-  width: 50px;
+  width: calc(
+            30px +
+                18 *
+                ((100vw - 320px) / 1360)
+        );
 }
 .header .header-container .header-logo .header-logo__text {
-  font-size: 40px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
-.header .header-container .header-logo .header-logo__text span {
+.header .header-container .header-logo .header-logo__text-span {
   color: rgb(86, 86, 86);
   font-weight: 500;
 }
-.header .header-container .header-block {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-}
-.header .header-container .header-block .header-contacts {
+.header .header-container .header-contacts {
   display: flex;
   gap: 40px;
+  justify-self: end;
 }
-.header .header-container .header-block .header-contacts__item {
+.header .header-container .header-contacts__item {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.header .header-container .header-block .header-contacts__item svg {
+.header .header-container .header-contacts__item svg {
   width: 1em;
   fill: var(--text-color);
 }
-.header .header-container .header-block .header-language {
+.header .header-container .header-language {
   cursor: pointer;
   position: relative;
   z-index: 15;
+  justify-self: end;
 }
-.header .header-container .header-block .header-language__main {
+.header .header-container .header-language__main {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.header .header-container .header-block .header-language__main svg {
+.header .header-container .header-language__main svg {
   width: 1em;
   fill: var(--text-color);
   transition: 0.2s;
 }
-.header .header-container .header-block .header-language .header-language__items {
+.header .header-container .header-language .header-language__items {
   display: none;
   position: absolute;
   margin-top: 5px;
   background-color: #000;
 }
-.header .header-container .header-block .header-language .header-language__items .header-language__item {
+.header .header-container .header-language .header-language__items .header-language__item {
   border: 1px solid var(--text-color);
   cursor: pointer;
   padding: 8px 14px;
   transition: background-color 0.3s ease;
 }
-.header .header-container .header-block .header-language .header-language__items .header-language__item:hover {
-  background-color: #131212;
+.header .header-container .header-language .header-language__items .header-language__item:hover {
+  background-color: #292727;
 }
-.header .header-container .header-block .header-language .header-language__items .header-language__item:not(:last-child) {
-  border-bottom: 1px;
+.header .header-container .header-language .header-language__items .header-language__item:not(:last-child) {
+  border-bottom: none;
 }
-.header .header-container .header-block .header-language.open .header-language__items {
+.header .header-container .header-language.open .header-language__items {
   display: block;
 }
-.header .header-container .header-block .header-language.open svg {
+.header .header-container .header-language.open svg {
   transform: rotateX(180deg);
+}
+@media (max-width: 1034px) {
+  .header .header-container {
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 25px;
+  }
+  .header .header-container .header-language {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .header .header-container .header-contacts {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+@media (max-width: 767px) {
+  .header .header-container .header-language {
+    display: none;
+  }
 }
 
 .navigation {
-  font-size: 17px;
+  font-size: 18px;
   margin: 21px 0 15px 0;
   display: flex;
   justify-content: center;
