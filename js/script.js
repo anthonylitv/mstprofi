@@ -4,28 +4,42 @@ window.onbeforeunload = function () {
 
 //Language select//Language select//Language select//Language select//Language select//Language select//Language select
 
-const select = document.querySelector('.header-language')
-const selectItems = document.querySelectorAll('.header-language__item')
-const selectedItem = document.querySelector('.header-language__main-selected')
+const selects = document.querySelectorAll('.header-language')
 
-selectedItem.textContent = (
-    localStorage.getItem('language') ||
-    checkBrowserLang() ||
-    'pl'
-).toUpperCase()
+selects.forEach(select => {
+    const selectItems = select.querySelectorAll('.header-language__item')
+    const selectedItem = select.querySelector('.header-language__main-selected')
 
-window.addEventListener('click', event => {
-    if (!select.contains(event.target)) {
-        select.classList.remove('open')
-    } else {
-        select.classList.toggle('open')
-    }
+    selectedItem.textContent = (
+        localStorage.getItem('language') ||
+        checkBrowserLang() ||
+        'pl'
+    ).toUpperCase()
+
+    window.addEventListener('click', event => {
+        if (!select.contains(event.target)) {
+            select.classList.remove('open')
+        } else {
+            select.classList.toggle('open')
+        }
+    })
+
+    selectItems.forEach(item => {
+        item.addEventListener('click', () => {
+            selectedItem.textContent = item.textContent
+        })
+    })
 })
 
-selectItems.forEach(item => {
-    item.addEventListener('click', () => {
-        selectedItem.textContent = item.textContent
-    })
+//Burger//Burger//Burger//Burger//Burger//Burger
+const burger = document.querySelector('.header__burger')
+const navigation = document.querySelector('.navigation')
+
+burger.addEventListener('click', () => {
+    navigation.classList.toggle('active')
+    burger.classList.toggle('active')
+
+    document.body.classList.toggle('lock')
 })
 
 //Slider//Slider//Slider//Slider//Slider//Slider//Slider//Slider

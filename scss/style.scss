@@ -39,6 +39,10 @@ body {
     background-color: black;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -133,10 +137,63 @@ p {
     }
 }
 
+.header-language {
+    cursor: pointer;
+    position: relative;
+    z-index: 15;
+    justify-self: end;
+
+    &__main {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            width: 1em;
+            fill: var(--text-color);
+            transition: 0.2s;
+        }
+    }
+
+    .header-language__items {
+        display: none;
+        position: absolute;
+        margin-top: 5px;
+        background-color: #000;
+
+        .header-language__item {
+            border: 1px solid var(--text-color);
+            cursor: pointer;
+            padding: 8px 14px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #292727;
+            }
+
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &.open {
+        .header-language__items {
+            display: block;
+        }
+        svg {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
 .header {
+    z-index: 150;
+    position: relative;
     border-bottom: 1px solid var(--text-color);
     padding: 20px 30px;
     font-size: 18px;
+    background-color: black;
 
     .header-container {
         max-width: 1500px;
@@ -150,7 +207,7 @@ p {
             display: flex;
             align-items: center;
             gap: 8px;
-            min-width: 0;
+
             .header-logo__image {
                 @include adaptiv-value('width', 48, 30, 0);
             }
@@ -182,60 +239,8 @@ p {
             }
         }
 
-        .header-language {
-            cursor: pointer;
-            position: relative;
-            z-index: 15;
-            justify-self: end;
-            &__main {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-
-                svg {
-                    width: 1em;
-                    fill: var(--text-color);
-                    transition: 0.2s;
-                }
-            }
-
-            .header-language__items {
-                display: none;
-                position: absolute;
-                margin-top: 5px;
-                background-color: #000;
-
-                .header-language__item {
-                    border: 1px solid var(--text-color);
-                    cursor: pointer;
-                    padding: 8px 14px;
-                    transition: background-color 0.3s ease;
-
-                    &:hover {
-                        background-color: #292727;
-                    }
-
-                    &:not(:last-child) {
-                        border-bottom: none;
-                    }
-                }
-            }
-
-            &.open {
-                .header-language__items {
-                    display: block;
-                }
-                svg {
-                    transform: rotateX(180deg);
-                }
-            }
-        }
-
-        @media (max-width: 1034px) {
+        @media (max-width: 1034px) and (min-width: 768px) {
             grid-template-columns: 50% 50%;
-            grid-row-gap: 25px;
-            .header-logo {
-            }
 
             .header-language {
                 grid-column-start: 2;
@@ -246,6 +251,7 @@ p {
 
             .header-contacts {
                 justify-self: center;
+                margin-top: 20px;
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 2;
@@ -254,6 +260,58 @@ p {
         }
 
         @media (max-width: 767px) {
+            grid-template-columns: 80% 20%;
+            grid-row-gap: 20px;
+
+            .header-logo {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                justify-self: center;
+            }
+
+            .header-contacts {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                justify-self: start;
+            }
+
+            .header__burger {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                justify-self: end;
+                position: relative;
+                width: 30px;
+                height: 20px;
+
+                span {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--text-color);
+                    left: 0;
+                    top: 9px;
+                }
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--text-color);
+                    left: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                }
+
+                &::before {
+                    top: 0;
+                }
+            }
             .header-language {
                 display: none;
             }
@@ -266,7 +324,7 @@ p {
     margin: 21px 0 15px 0;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    column-gap: 60px;
 
     .navigation__item {
         border-bottom: 1px solid transparent;
@@ -274,6 +332,34 @@ p {
         transition: border 0.5s ease;
         &:hover {
             border-bottom: 1px solid var(--text-color);
+        }
+    }
+
+    .header-language {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        padding-top: 50px;
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 25px;
+        overflow: auto;
+        transition: all 0.3s ease;
+        row-gap: 20px;
+        &.active {
+            top: 0;
+        }
+        .header-language {
+            display: block;
         }
     }
 }
