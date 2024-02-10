@@ -132,3 +132,38 @@
     display: block;
   }
 }
+
+.slider .hover-slider__item-information {
+  top: 20%;
+}
+@media (max-width: 822px) {
+  .slider .hover-slider__item-information-h1 {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 822px) {
+  .slider .hover-slider__item-information-p {
+    line-height: 1.5;
+    max-width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .slider .hover-slider-buttons__item {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .slider .hover-slider-buttons__item svg {
+    width: 12px;
+  }
+}
+@media (max-width: 1256px) {
+  .about-us .about-us-block {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.about-us .about-us-block__img {
+  align-self: center;
+}

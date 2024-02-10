@@ -157,10 +157,19 @@
         &__item {
             &-information {
                 &-h1 {
+                    @media (max-width: 822px) {
+                        padding: 0 40px;
+                    }
                 }
 
                 &-p {
+                    @media (max-width: 822px) {
+                        line-height: 1.5;
+                        max-width: 70%;
+                    }
                 }
+
+                top: 20%;
             }
 
             &-img {
@@ -177,7 +186,15 @@
     }
 
     .hover-slider-buttons__item {
+        @media (max-width: 500px) {
+            width: 30px;
+            height: 30px;
+        }
+
         svg {
+            @media (max-width: 500px) {
+                width: 12px;
+            }
         }
 
         &:hover {
@@ -203,6 +220,11 @@
 
 .about-us {
     .about-us-block {
+        @media (max-width: 1256px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
         &__info {
             &-h2 {
                 &::after {
@@ -214,6 +236,7 @@
         }
 
         &__img {
+            align-self: center;
         }
     }
 }
