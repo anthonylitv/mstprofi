@@ -135,6 +135,19 @@
   .navigation .header-language {
     display: block;
   }
+
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .footer .container {
+    align-items: center;
+  }
+  .footer .container .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 @media (max-width: 578px) {
   .header .header-container .header-contacts {
@@ -171,11 +184,6 @@
     width: 30px;
   }
 
-  .footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
   .countries {
     padding-bottom: 50px;
     padding-top: 10px;
@@ -190,5 +198,21 @@
   }
   .slider .hover-slider-buttons__item svg {
     width: 12px;
+  }
+
+  .footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer .container .footer-contacts {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }

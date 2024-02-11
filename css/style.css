@@ -545,9 +545,17 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.footer__h4 {
+.footer {
   font-size: 14px;
   font-weight: 300;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container .footer-contacts {
+  display: flex;
+  gap: 20px;
 }
 
 @keyframes arrow-forma {

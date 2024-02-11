@@ -600,9 +600,16 @@ p {
 }
 
 .footer {
-    &__h4 {
-        font-size: 14px;
-        font-weight: 300;
+    font-size: 14px;
+    font-weight: 300;
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .footer-contacts {
+            display: flex;
+            gap: 20px;
+        }
     }
 }
 
