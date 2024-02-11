@@ -133,9 +133,6 @@
   }
 }
 
-.slider .hover-slider__item-information {
-  top: 20%;
-}
 @media (max-width: 822px) {
   .slider .hover-slider__item-information-h1 {
     padding: 0 40px;
@@ -145,6 +142,11 @@
   .slider .hover-slider__item-information-p {
     line-height: 1.5;
     max-width: 70%;
+  }
+}
+@media (max-width: 822px) {
+  .slider .hover-slider__item-information {
+    top: 25%;
   }
 }
 @media (max-width: 500px) {
@@ -176,6 +178,12 @@
 }
 @media (max-width: 1024px) {
   .certificats .container .certificats__img {
-    max-width: 80%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1274px) {
+  .our-services .our-services-cards {
+    flex-direction: column;
   }
 }

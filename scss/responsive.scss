@@ -174,7 +174,9 @@
                     }
                 }
 
-                top: 20%;
+                @media (max-width: 822px) {
+                    top: 25%;
+                }
             }
 
             &-img {
@@ -268,7 +270,7 @@
         }
         .certificats__img {
             @media (max-width: 1024px) {
-                max-width: 80%;
+                max-width: 90%;
             }
         }
     }
@@ -284,6 +286,9 @@
     }
 
     .our-services-cards {
+        @media (max-width: 1274px) {
+            flex-direction: column;
+        }
         &__item {
             &-h4 {
             }

@@ -161,12 +161,12 @@ const modalInner = document.querySelector('.modal__inner')
 
 function openModal() {
     modal.classList.add('active')
-    document.body.style.overflow = 'hidden'
+    document.body.classList.add('lock')
 }
 
 function closeModal() {
     modal.classList.remove('active')
-    document.body.style.overflow = 'visible'
+    document.body.classList.remove('lock')
 }
 
 certificats.forEach(item => {
