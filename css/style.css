@@ -60,7 +60,7 @@ p {
 
 .modal {
   content: "";
-  z-index: 100;
+  z-index: 200;
   position: fixed;
   display: none;
   justify-content: center;
@@ -82,6 +82,9 @@ p {
   width: 25px;
   transition: 0.3s;
   fill: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
 }
 .modal__close:hover {
   fill: gray;
@@ -435,14 +438,15 @@ p {
 .certificats .container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 .certificats .container .certificats__img {
-  max-width: 580px;
+  max-width: 49%;
   cursor: pointer;
 }
 .certificats .certificats-modal__img {
-  width: 900px;
+  max-width: 95%;
+  max-height: 95%;
 }
 
 .our-services__h2 {

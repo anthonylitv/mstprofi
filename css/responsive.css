@@ -167,3 +167,15 @@
 .about-us .about-us-block__img {
   align-self: center;
 }
+
+@media (max-width: 1024px) {
+  .certificats .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .certificats .container .certificats__img {
+    max-width: 80%;
+  }
+}

@@ -1,3 +1,8 @@
+.container {
+    @media (max-width: 1256px) {
+    }
+}
+
 .header {
     .header-container {
         .header-contacts {
@@ -257,13 +262,20 @@
 
 .certificats {
     .container {
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
         .certificats__img {
+            @media (max-width: 1024px) {
+                max-width: 80%;
+            }
         }
     }
+}
 
-    .certificats-modal {
-        &__img {
-        }
+.certificats-modal {
+    &__img {
     }
 }
 
