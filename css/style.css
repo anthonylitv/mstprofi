@@ -31,8 +31,8 @@ body.lock {
 
 h1 {
   font-size: calc(
-            29px +
-                19 *
+            28px +
+                20 *
                 min(1px, (100vw - 320px) / 1360)
         );
   font-weight: 600;
@@ -263,7 +263,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 30%;
+  top: 25%;
   width: 100%;
 }
 .slider .hover-slider__item-information-h1 {
@@ -525,16 +525,14 @@ p {
   position: relative;
   z-index: 10;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
-.forma-info__p {
-  margin: 40px 0 80px;
-}
-.forma-info__arrow {
-  position: absolute;
-  top: 60%;
-  left: 36%;
-  width: 55px;
+.forma-info svg {
   fill: var(--text-color);
+  width: 40px;
 }
 .forma__overlay {
   position: absolute;

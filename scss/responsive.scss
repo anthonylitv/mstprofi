@@ -1,18 +1,6 @@
-.container {
-    @media (max-width: 1256px) {
-    }
-}
-
-.header {
-    .header-container {
-        .header-contacts {
-            @media (max-width: 578px) {
-                flex-direction: column;
-                row-gap: 10px;
-            }
-        }
-
-        @media (max-width: 1034px) and (min-width: 768px) {
+@media (max-width: 1034px) and (min-width: 768px) {
+    .header {
+        .header-container {
             grid-template-columns: 50% 50%;
 
             .header-language {
@@ -31,8 +19,62 @@
                 grid-row-end: 3;
             }
         }
+    }
+}
 
-        @media (max-width: 767px) {
+@media (max-width: 1274px) {
+    .our-services {
+        .our-services-cards {
+            flex-direction: column;
+        }
+    }
+
+    .about-us {
+        .about-us-block {
+            flex-direction: column;
+            row-gap: 20px;
+
+            &__img {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .certificats {
+        .container {
+            flex-direction: column;
+            align-items: center;
+
+            .certificats__img {
+                max-width: 90%;
+            }
+        }
+    }
+}
+@media (max-width: 822px) {
+    .slider {
+        .hover-slider {
+            &__item {
+                &-information {
+                    &-h1 {
+                        padding: 0 40px;
+                    }
+
+                    &-p {
+                        line-height: 1.5;
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        .header-container {
             grid-template-columns: 80% 20%;
             grid-row-gap: 20px;
 
@@ -106,33 +148,9 @@
                 display: none;
             }
         }
-
-        @media (max-width: 578px) {
-            .header-contacts {
-                justify-self: center;
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            .header-logo {
-                grid-column-start: 1;
-                grid-column-end: 2;
-                justify-self: start;
-            }
-
-            .header__burger {
-                grid-column-start: 2;
-                grid-column-end: 3;
-                grid-row-start: 1;
-                grid-row-end: 2;
-                justify-self: end;
-            }
-        }
     }
-}
 
-.navigation {
-    @media (max-width: 767px) {
+    .navigation {
         position: fixed;
         top: -200%;
         left: 0;
@@ -157,185 +175,74 @@
     }
 }
 
-.slider {
-    .hover-slider {
-        &__item {
-            &-information {
-                &-h1 {
-                    @media (max-width: 822px) {
-                        padding: 0 40px;
-                    }
-                }
-
-                &-p {
-                    @media (max-width: 822px) {
-                        line-height: 1.5;
-                        max-width: 70%;
-                    }
-                }
-
-                @media (max-width: 822px) {
-                    top: 25%;
-                }
+@media (max-width: 578px) {
+    .header {
+        .header-container {
+            .header-contacts {
+                justify-self: center;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                flex-direction: column;
+                row-gap: 10px;
             }
 
-            &-img {
+            .header-logo {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                justify-self: start;
             }
 
-            &--active {
-                & img {
-                }
-            }
-
-            &::after {
+            .header__burger {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                justify-self: end;
             }
         }
     }
 
-    .hover-slider-buttons__item {
-        @media (max-width: 500px) {
+    h1 {
+        letter-spacing: 0px;
+    }
+
+    .forma {
+        padding: 50px 0;
+
+        &-info {
+            gap: 30px;
+
+            svg {
+                width: 30px;
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .countries {
+        padding-bottom: 50px;
+        padding-top: 10px;
+    }
+
+    .slider {
+        .hover-slider {
+            &__item {
+                &-information {
+                    top: 19%;
+                }
+            }
+        }
+        .hover-slider-buttons__item {
             width: 30px;
             height: 30px;
-        }
 
-        svg {
-            @media (max-width: 500px) {
+            svg {
                 width: 12px;
             }
         }
-
-        &:hover {
-            svg {
-            }
-        }
-
-        &-left {
-        }
-
-        &-right {
-        }
-    }
-
-    .hover-slider-nav {
-        &__item {
-            &--active,
-            &:hover {
-            }
-        }
-    }
-}
-
-.about-us {
-    .about-us-block {
-        @media (max-width: 1256px) {
-            flex-direction: column;
-            row-gap: 20px;
-        }
-
-        &__info {
-            &-h2 {
-                &::after {
-                }
-            }
-
-            &-p {
-            }
-        }
-
-        &__img {
-            align-self: center;
-        }
-    }
-}
-
-.achievments {
-    &__h2 {
-    }
-
-    &-list {
-        &__item {
-            svg {
-            }
-            &-text {
-            }
-        }
-    }
-}
-
-.certificats {
-    .container {
-        @media (max-width: 1024px) {
-            flex-direction: column;
-            align-items: center;
-        }
-        .certificats__img {
-            @media (max-width: 1024px) {
-                max-width: 90%;
-            }
-        }
-    }
-}
-
-.certificats-modal {
-    &__img {
-    }
-}
-
-.our-services {
-    &__h2 {
-    }
-
-    .our-services-cards {
-        @media (max-width: 1274px) {
-            flex-direction: column;
-        }
-        &__item {
-            &-h4 {
-            }
-
-            &-p {
-            }
-
-            &-button {
-                &::after {
-                }
-            }
-
-            &:hover {
-                & ::after {
-                }
-            }
-        }
-    }
-}
-
-.countries {
-    &__h2 {
-    }
-
-    .countries-list {
-        img {
-        }
-    }
-}
-
-.forma {
-    &-info {
-        &__h1 {
-        }
-
-        &__p {
-        }
-
-        &__arrow {
-        }
-    }
-
-    &__overlay {
-    }
-}
-
-.footer {
-    &__h4 {
     }
 }

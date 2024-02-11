@@ -115,6 +115,66 @@ const homeTexts = {
         ua: 'Наші послуги',
         ru: 'Наши услуги',
     },
+    'our-services-cards__item-h4-1': {
+        pl: 'Legalizacja',
+        en: 'Legalization',
+        ua: 'Легалізація',
+        ru: 'Легализация',
+    },
+    'our-services-cards__item-h4-2': {
+        pl: 'Rekrutacja',
+        en: 'Recruitment',
+        ua: 'Рекрутація',
+        ru: 'Рекрутация',
+    },
+    'our-services-cards__item-h4-3': {
+        pl: 'Kwalifikowane szkolenie specjalistów do pracy',
+        en: 'Qualified training of specialists for work',
+        ua: 'Кваліфікована підготовка спеціалістів до роботи',
+        ru: 'Квалифицированная подготовка специалистов к работе',
+    },
+    'our-services-cards__item-p-1': {
+        pl: 'Zapewniamy wszelkie niezbędne dokumenty związane z pobytem i legalną pracą w Polsce',
+        en: 'We provide all necessary documents related to staying and legal work in Poland',
+        ua: "Ми надаємо всі необхідні документи, пов'язані з перебуванням і легальною роботою в Польщі",
+        ru: 'Мы предоставляем все необходимые документы, связанные с пребыванием и легальной работой в Польше',
+    },
+    'our-services-cards__item-p-2': {
+        pl: 'Praca w Polsce dla obcokrajowców. Jeśli jesteś zainteresowany legalną pracą w Polsce, zapraszamy do kontaktu. Proces rekrutacji obejmuje, obok rekrutacji, selekcji i rozmowy kwalifikacyjnej, pozyskanie dodatkowych informacji o kandydatach, podpisanie umowy oraz adaptację nowych pracowników',
+        en: 'Work in Poland for foreigners. If you are interested in legal work in Poland, we suggest you contact us. The recruiting process includes recruitment, selection, and interview, obtaining additional information about candidates, signing a contract, and adopting new employees',
+        ua: "Робота в Польщі для іноземців. Якщо ви зацікавлені легальною працею в Польщі, пропонуємо вам зв'язатися з нами. Процес рекрутингу передбачає поряд із залученням, відбором і співбесідою також отримання додаткової інформації про кандидатів, підписання контракту й адаптацію нових працівників",
+        ru: 'Работа для иностранцев в Польше. Если вы заинтересованы в легальном труде в Польше, предлагаем вам связаться с нами. Процесс рекрутинга предусматривает наряду с привлечением, отбором и собеседованием также получение дополнительной информации о кандидатах, подписание контракта и адаптацию новых работников',
+    },
+    'our-services-cards__item-p-3': {
+        pl: 'Jeśli nie masz doświadczenia w pracach spawalniczych - to nie problem. Zapisz się u nas na szkolenie spawalnicze, szybko i sprawnie opanujesz nową specjalność',
+        en: 'If you do not have experience in welding work - this is not a problem. Sign up for welding training with us, you will quickly and efficiently master a new specialty',
+        ua: 'Якщо у Вас не має досвіду в зварювальних роботах - це не проблема. Запишіться до нас на навчання зварювальника, швидко і якісно опануєте нову спеціальність',
+        ru: 'Если у Вас нет опыта в сварочных работах - это не проблема. Запишитесь к нам на обучение сварщика, быстро и качественно овладеете новой специальностью',
+    },
+    'our-services-cards__item-button': {
+        pl: 'Więcej szczegółów',
+        en: 'More details',
+        ua: 'Детальніше',
+        ru: 'Подробнее',
+    },
+    countries__h2: {
+        pl: 'Kraje partnerskie',
+        en: 'Partner countries',
+        ua: 'Країни-партнери',
+        ru: 'Страны-партнеры',
+    },
+    'forma-info__h1': {
+        pl: 'Zdobądź najbardziej aktualne oferty pracy!',
+        en: 'Get the most current vacancies!',
+        ua: 'Отримуйте найактуальніші вакансії!',
+        ru: 'Получайте самые актуальные вакансии!',
+    },
+    'forma-info__p': {
+        pl: 'Wypełnij formularz, a my niezwłocznie się z Tobą skontaktujemy!',
+        en: 'Fill out the form and we will contact you right away!',
+        ua: "Заповніть форму і ми одразу з Вами зв'яжемося!",
+        ru: 'Заполните форму, и мы сразу с Вами свяжемся!',
+    },
 }
 
 // Checking the site page path
