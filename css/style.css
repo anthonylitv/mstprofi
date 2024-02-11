@@ -247,6 +247,7 @@ p {
   height: 90vh;
   overflow: hidden;
   min-height: 550px;
+  max-height: 1600px;
 }
 .slider .hover-slider__item {
   position: absolute;
@@ -533,6 +534,7 @@ p {
 .forma-info svg {
   fill: var(--text-color);
   width: 40px;
+  animation: arrow-forma 1s ease-in-out infinite;
 }
 .forma__overlay {
   position: absolute;
@@ -546,4 +548,16 @@ p {
 .footer__h4 {
   font-size: 14px;
   font-weight: 300;
+}
+
+@keyframes arrow-forma {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
 }
