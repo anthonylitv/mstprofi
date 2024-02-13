@@ -159,15 +159,28 @@ const modalInner = document.querySelector('.modal__inner')
 const certificatsImage = document.querySelector('.certificats-modal__img')
 const certificats = document.querySelectorAll('.certificats__img')
 const formBannerButtons = document.querySelectorAll('.get-vacancy-button')
+const otherItems = document.querySelectorAll('[data-inert]')
 
 function openModal(modal) {
     modal.classList.add('active')
     document.body.classList.add('lock')
+
+    for (let i = 0; i < otherItems.length; i++) {
+        otherItems[i].setAttribute('inert', true)
+    }
+
+    document.addEventListener('keydown', handleKeyPress.bind(null, modal))
 }
 
 function closeModal(modal) {
     modal.classList.remove('active')
     document.body.classList.remove('lock')
+
+    for (let i = 0; i < otherItems.length; i++) {
+        otherItems[i].removeAttribute('inert')
+    }
+
+    document.removeEventListener('keydown', handleKeyPress.bind(null, modal))
 }
 
 function checkModalClickForClose(modal) {
@@ -176,6 +189,12 @@ function checkModalClickForClose(modal) {
             closeModal(modal)
         }
     })
+}
+
+function handleKeyPress(modal, event) {
+    if (event.key === 'Escape') {
+        closeModal(modal)
+    }
 }
 
 certificats.forEach(item => {

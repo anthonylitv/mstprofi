@@ -188,3 +188,17 @@ a {
 h4 {
     font-weight: inherit;
 }
+
+button {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(0, 150, 255, 1);
+    outline-offset: 3px;
+}

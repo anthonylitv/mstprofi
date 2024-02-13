@@ -81,14 +81,17 @@ p {
   top: 25px;
   right: 25px;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 11px;
+  display: flex;
+}
+.modal__close svg {
   width: 25px;
   transition: 0.3s;
   fill: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 5px;
 }
-.modal__close:hover {
+.modal__close:hover svg {
   fill: gray;
 }
 
@@ -310,7 +313,6 @@ p {
   top: 50%;
   z-index: 15;
   transform: translateY(-50%);
-  border: none;
   background-color: var(--text-color);
   height: 35px;
   width: 35px;
@@ -559,6 +561,42 @@ p {
 .footer .container .footer-contacts {
   display: flex;
   gap: 20px;
+}
+
+.form-modal-inner {
+  max-width: 560px;
+  text-align: center;
+  font-size: 16px;
+  background-color: black;
+}
+.form-modal-inner__img {
+  max-width: 100%;
+}
+.form-modal-inner__h4 {
+  font-size: 36px;
+}
+.form-modal-inner-form {
+  padding: 40px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-modal-inner-form__input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: black;
+  height: 60px;
+}
+.form-modal-inner-form__input::placeholder {
+  color: #5c3618;
+}
+.form-modal-inner-form__submit-button {
+  background-color: var(--text-color);
+  padding: 20px 0;
+  color: black;
+  border-radius: 50px;
 }
 
 @keyframes arrow-forma {

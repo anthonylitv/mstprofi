@@ -14,7 +14,7 @@
         <title>MST Profi</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header" data-inert>
             <div class="header-container">
                 <a href="" class="header-logo">
                     <img
@@ -74,11 +74,13 @@
                     </ul>
                 </div>
 
-                <div class="header__burger"><span></span></div>
+                <button class="header__burger">
+                    <span></span>
+                </button>
             </div>
         </header>
 
-        <nav class="navigation">
+        <nav class="navigation" data-inert>
             <a
                 href="#about-us"
                 class="navigation__item"
@@ -122,7 +124,7 @@
             </div>
         </nav>
 
-        <section class="slider">
+        <section class="slider" data-inert>
             <button
                 id="hover-slider-button-left"
                 class="hover-slider-buttons__item hover-slider-buttons__item-left"
@@ -240,7 +242,7 @@
             </ul>
         </section>
 
-        <section class="about-us sections" id="about-us">
+        <section class="about-us sections" id="about-us" data-inert>
             <div class="container">
                 <div class="about-us-block">
                     <div class="about-us-block__info">
@@ -278,7 +280,7 @@
             </div>
         </section>
 
-        <section class="achievments sections" id="achievments">
+        <section class="achievments sections" id="achievments" data-inert>
             <div class="container">
                 <h2 class="achievments__h2" data-lang="achievments__h2">
                     Наші досягнення
@@ -369,24 +371,31 @@
                     class="certificats__img"
                 />
             </div>
-            <span class="certificats-modal modal" data-modal-certificats
-                ><img
+            <div
+                role="dialog"
+                aria-modal="true"
+                class="certificats-modal modal"
+                data-modal-certificats
+            >
+                <img
                     class="certificats-modal__img modal__inner"
                     src=""
                     alt="Сертифікат в зумі"
                 />
-                <svg class="modal__close" viewBox="0 0 23 23" fill="none">
-                    <path
-                        d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
-                    ></path>
-                    <path
-                        d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
-                    ></path>
-                </svg>
-            </span>
+                <button class="modal__close">
+                    <svg viewBox="0 0 23 23" fill="none">
+                        <path
+                            d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
+                        ></path>
+                        <path
+                            d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
         </section>
 
-        <section class="our-services sections" id="our-services">
+        <section class="our-services sections" id="our-services" data-inert>
             <div class="container">
                 <h2 class="our-services__h2" data-lang="our-services__h2">
                     Наші послуги
@@ -462,7 +471,7 @@
             </div>
         </section>
 
-        <section class="countries sections">
+        <section class="countries sections" data-inert>
             <h2 class="countries__h2" data-lang="countries__h2">
                 Країни-партнери
             </h2>
@@ -482,7 +491,7 @@
             </div>
         </section>
 
-        <section class="forma">
+        <section class="forma" data-inert>
             <span class="forma__overlay"></span>
             <div class="forma-info">
                 <h1 class="forma-info__h1" data-lang="forma-info__h1">
@@ -505,7 +514,7 @@
             </div>
         </section>
 
-        <footer class="footer sections">
+        <footer class="footer sections" data-inert>
             <div class="container">
                 <h4 class="footer__h4">© All Rights Reserved. MST Profi.</h4>
 
@@ -517,30 +526,55 @@
             </div>
         </footer>
 
-        <div class="modal" data-modal-form>
-            <form class="modal__inner" action="">
+        <div
+            role="dialog"
+            aria-modal="true"
+            class="form-modal modal"
+            data-modal-form
+        >
+            <div class="form-modal-inner modal__inner">
                 <img
                     src="images/form-banner.png"
                     alt="Баннер"
-                    class="modal__inner-img"
+                    class="form-modal-inner__img"
                 />
-
-                <h4 class="modal__inner-h4">Bądźmy w kontakcie!</h4>
-                <p class="modal__inner-p">
+                <h4 class="form-modal-inner__h4">Bądźmy w kontakcie!</h4>
+                <p class="form-modal-inner__p">
                     Wypełnij poniższy formularz, a my skontaktujemy się z Tobą!
                 </p>
-                <input type="text" />
-                <input type="tel" name="" id="" />
-            </form>
+                <form class="form-modal-inner-form" action="">
+                    <input
+                        class="form-modal-inner-form__input"
+                        placeholder="Twoje imię"
+                        type="text"
+                    />
+                    <input
+                        class="form-modal-inner-form__input"
+                        placeholder="Twój numer telefonu"
+                        type="tel"
+                        name="telefon"
+                        id="telF"
+                    />
 
-            <svg class="modal__close" viewBox="0 0 23 23" fill="none">
-                <path
-                    d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
-                ></path>
-                <path
-                    d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
-                ></path>
-            </svg>
+                    <button
+                        class="form-modal-inner-form__submit-button"
+                        type="submit"
+                    >
+                        Wysłać
+                    </button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg viewBox="0 0 23 23" fill="none">
+                    <path
+                        d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
+                    ></path>
+                    <path
+                        d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
+                    ></path>
+                </svg>
+            </button>
         </div>
     </body>
 
