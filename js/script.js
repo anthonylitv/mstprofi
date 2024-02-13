@@ -154,30 +154,43 @@ function customClearInterval() {
 
 //Modal//Modal//Modal//Modal//Modal//Modal//Modal
 
-const certificats = document.querySelectorAll('.certificats__img')
-const modal = document.querySelector('.modal')
-const modalImage = document.querySelector('.certificats-modal__img')
+const modals = document.querySelectorAll('.modal')
 const modalInner = document.querySelector('.modal__inner')
+const certificatsImage = document.querySelector('.certificats-modal__img')
+const certificats = document.querySelectorAll('.certificats__img')
+const formBannerButtons = document.querySelectorAll('.get-vacancy-button')
 
-function openModal() {
+function openModal(modal) {
     modal.classList.add('active')
     document.body.classList.add('lock')
 }
 
-function closeModal() {
+function closeModal(modal) {
     modal.classList.remove('active')
     document.body.classList.remove('lock')
 }
 
+function checkModalClickForClose(modal) {
+    modal.addEventListener('click', event => {
+        if (!event.target.closest('.modal__inner')) {
+            closeModal(modal)
+        }
+    })
+}
+
 certificats.forEach(item => {
     item.addEventListener('click', event => {
-        openModal()
-        modalImage.src = event.target.src
+        certificatsImage.src = event.target.src
+        const modal = document.querySelector('.modal[data-modal-certificats]')
+        openModal(modal)
+        checkModalClickForClose(modal)
     })
 })
 
-modal.addEventListener('click', event => {
-    if (!event.target.classList.contains('modal__inner')) {
-        closeModal()
-    }
+formBannerButtons.forEach(item => {
+    item.addEventListener('click', () => {
+        const modal = document.querySelector('.modal[data-modal-form]')
+        openModal(modal)
+        checkModalClickForClose(modal)
+    })
 })

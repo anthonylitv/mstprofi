@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -369,7 +369,7 @@
                     class="certificats__img"
                 />
             </div>
-            <span class="certificats-modal modal"
+            <span class="certificats-modal modal" data-modal-certificats
                 ><img
                     class="certificats-modal__img modal__inner"
                     src=""
@@ -516,6 +516,32 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal" data-modal-form>
+            <form class="modal__inner" action="">
+                <img
+                    src="images/form-banner.png"
+                    alt="Баннер"
+                    class="modal__inner-img"
+                />
+
+                <h4 class="modal__inner-h4">Bądźmy w kontakcie!</h4>
+                <p class="modal__inner-p">
+                    Wypełnij poniższy formularz, a my skontaktujemy się z Tobą!
+                </p>
+                <input type="text" />
+                <input type="tel" name="" id="" />
+            </form>
+
+            <svg class="modal__close" viewBox="0 0 23 23" fill="none">
+                <path
+                    d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
+                ></path>
+                <path
+                    d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
+                ></path>
+            </svg>
+        </div>
     </body>
 
     <script src="js/localization.js"></script>

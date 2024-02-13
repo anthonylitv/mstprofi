@@ -83,9 +83,10 @@ p {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.9);
-
+    visibility: hidden;
     &.active {
         display: flex;
+        visibility: visible;
     }
 
     &__close {
@@ -145,6 +146,7 @@ p {
     cursor: pointer;
     position: relative;
     justify-self: end;
+    user-select: none;
 
     &__main {
         display: flex;
