@@ -29,7 +29,7 @@ body.lock {
   padding: 50px 30px;
 }
 
-h1 {
+.h1-size-text {
   font-size: calc(
             28px +
                 20 *
@@ -39,7 +39,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-h2 {
+.h2-size-text {
   font-size: calc(
             29px +
                 13 *
@@ -49,7 +49,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-p {
+.p-size-text {
   font-size: calc(
             16px +
                 4 *
@@ -574,6 +574,7 @@ p {
 }
 .form-modal-inner__h4 {
   font-size: 36px;
+  margin: 25px 0;
 }
 .form-modal-inner-form {
   padding: 40px 45px;
@@ -583,20 +584,31 @@ p {
 }
 .form-modal-inner-form__input {
   border: none;
-  outline: none;
   border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
   background-color: black;
   height: 60px;
 }
+.form-modal-inner-form__input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
 .form-modal-inner-form__input::placeholder {
   color: #5c3618;
 }
 .form-modal-inner-form__submit-button {
+  cursor: pointer;
   background-color: var(--text-color);
   padding: 20px 0;
   color: black;
   border-radius: 50px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.form-modal-inner-form__submit-button:hover {
+  background-color: #000;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
 @keyframes arrow-forma {

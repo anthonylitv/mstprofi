@@ -54,19 +54,19 @@ body {
     padding: 50px 30px;
 }
 
-h1 {
+.h1-size-text {
     @include adaptiv-value('font-size', 48, 28, 0);
     font-weight: 600;
     letter-spacing: 1px;
 }
 
-h2 {
+.h2-size-text {
     @include adaptiv-value('font-size', 42, 29, 0);
     font-weight: 600;
     margin-bottom: 50px;
 }
 
-p {
+.p-size-text {
     @include adaptiv-value('font-size', 20, 16, 0);
     line-height: 1.55;
 }
@@ -635,6 +635,7 @@ p {
 
         &__h4 {
             font-size: 36px;
+            margin: 25px 0;
         }
 
         &__p {
@@ -647,12 +648,16 @@ p {
 
             &__input {
                 border: none;
-                outline: none;
                 border-bottom: 1px solid var(--text-color);
                 color: var(--text-color);
                 background-color: black;
 
                 height: 60px;
+
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid white;
+                }
 
                 &::placeholder {
                     color: #5c3618;
@@ -660,10 +665,18 @@ p {
             }
 
             &__submit-button {
+                cursor: pointer;
                 background-color: var(--text-color);
                 padding: 20px 0;
                 color: black;
                 border-radius: 50px;
+                border: 1px solid transparent;
+                transition: all 0.2s ease;
+                &:hover {
+                    background-color: #000;
+                    color: var(--text-color);
+                    border: 1px solid var(--text-color);
+                }
             }
         }
     }
