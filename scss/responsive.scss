@@ -181,6 +181,7 @@
 
     .form-modal {
         .modal__close {
+            order: 0;
             background-color: black;
             position: static;
             border-radius: 0;
@@ -197,7 +198,7 @@
         &-inner {
             text-align: center;
             background-color: black;
-
+            order: 1;
             &__img {
             }
 

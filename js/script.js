@@ -53,6 +53,9 @@ function isNavigationShown() {
     burger.classList.toggle('active')
     navigation.classList.toggle('active')
     document.body.classList.toggle('lock')
+    console.log(burger.classList.contains('active'))
+
+    checkInertItems(burger.classList.contains('active'))
 }
 
 burger.addEventListener('click', isNavigationShown)
@@ -162,28 +165,24 @@ const itemsForOpenFormBanner = [
     ...document.querySelectorAll('.get-vacancy-button'),
     ...document.querySelectorAll('.our-services-cards__item'),
 ]
-const otherItems = document.querySelectorAll('[data-inert]')
+
+let focusedElementBeforeModal
 
 function openModal(modal) {
+    focusedElementBeforeModal = document.activeElement
     modal.classList.add('active')
     document.body.classList.add('lock')
-
-    for (let i = 0; i < otherItems.length; i++) {
-        otherItems[i].setAttribute('inert', true)
-    }
-
+    checkInertItems(true)
+    modal.querySelector('form input')?.focus()
     document.addEventListener('keydown', handleKeyPress.bind(null, modal))
 }
 
 function closeModal(modal) {
     modal.classList.remove('active')
     document.body.classList.remove('lock')
-
-    for (let i = 0; i < otherItems.length; i++) {
-        otherItems[i].removeAttribute('inert')
-    }
-
+    checkInertItems(false)
     document.removeEventListener('keydown', handleKeyPress.bind(null, modal))
+    focusedElementBeforeModal?.focus()
 }
 
 function checkModalClickForClose(modal) {
@@ -216,3 +215,15 @@ itemsForOpenFormBanner.forEach(item => {
         checkModalClickForClose(modal)
     })
 })
+
+function checkInertItems(isInert) {
+    const otherItems = !burger.classList.contains('active')
+        ? document.querySelectorAll('[data-inert]')
+        : document.querySelectorAll(
+              '[data-inert]:not(.header):not(.navigation)'
+          )
+
+    for (let i = 0; i < otherItems.length; i++) {
+        otherItems[i].inert = isInert
+    }
+}
