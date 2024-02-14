@@ -175,6 +175,36 @@ const homeTexts = {
         ua: "Заповніть форму і ми одразу з Вами зв'яжемося!",
         ru: 'Заполните форму, и мы сразу с Вами свяжемся!',
     },
+    'form-modal-inner-info__h4': {
+        pl: 'Bądźmy w kontakcie!',
+        en: "Let's keep in touch!",
+        ua: "Давайте будемо на зв'язку!",
+        ru: 'Давайте будем на связи!',
+    },
+    'form-modal-inner-info__p': {
+        pl: 'Wypełnij poniższy formularz, a my skontaktujemy się z Tobą!',
+        en: 'Fill out the form below and we will contact you!',
+        ua: "Заповніть форму нижче і ми з Вами зв'яжемося!",
+        ru: 'Заполните форму ниже и мы с Вами свяжемся!',
+    },
+    'form-modal-inner-form__submit-button': {
+        pl: 'Wysłać',
+        en: 'Send',
+        ua: 'Відправити',
+        ru: 'Отправить',
+    },
+    'form-modal-inner-form__input-1': {
+        pl: 'Twoje imię',
+        en: 'Your name',
+        ua: "Ваше ім'я",
+        ru: 'Ваше имя',
+    },
+    'form-modal-inner-form__input-2': {
+        pl: 'Twój numer telefonu',
+        en: 'Your phone number',
+        ua: 'Ваш номер телефону',
+        ru: 'Ваш номер телефона',
+    },
 }
 
 // Checking the site page path
@@ -196,6 +226,10 @@ function changeLang() {
         let elem = document.querySelectorAll(`[data-lang=${key}]`)
         elem.forEach(item => {
             item && (item.textContent = currentTexts[key][currentLang])
+
+            if (item.type && ['text', 'tel'].includes(item.type)) {
+                item.placeholder = currentTexts[key][currentLang]
+            }
         })
     }
 }
