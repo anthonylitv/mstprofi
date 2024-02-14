@@ -349,8 +349,8 @@ body.lock {
   gap: 10px;
 }
 .slider .hover-slider-nav__item {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid var(--text-color);
