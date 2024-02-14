@@ -70,11 +70,9 @@ body.lock {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  visibility: hidden;
 }
 .modal.active {
   display: flex;
-  visibility: visible;
 }
 .modal__close {
   position: absolute;
@@ -141,6 +139,7 @@ body.lock {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 .header-language__main svg {
   width: 1em;
@@ -157,6 +156,7 @@ body.lock {
   border: 1px solid var(--text-color);
   cursor: pointer;
   padding: 8px 14px;
+  width: 100%;
   transition: background-color 0.3s ease;
 }
 .header-language .header-language__items .header-language__item:hover {
@@ -567,7 +567,7 @@ body.lock {
   overflow-y: auto;
 }
 .form-modal-inner {
-  max-width: 560px;
+  max-width: 600px;
   text-align: center;
   font-size: 16px;
   background-color: black;

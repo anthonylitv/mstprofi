@@ -79,9 +79,12 @@ const arrowRight = document.querySelector('#hover-slider-button-right')
 
 sliderItems.forEach((item, index) => {
     item.dataset.index = index
-
     if (index === 0) {
         item.classList.add('hover-slider__item--active')
+    }
+
+    if (index !== 0) {
+        item.querySelector('.get-vacancy-button').inert = true
     }
 })
 
@@ -103,9 +106,11 @@ function toggleActivity(index) {
         if (i === Number(index)) {
             sliderItems[i].classList.add('hover-slider__item--active')
             navItems[i].classList.add('hover-slider-nav__item--active')
+            sliderItems[i].querySelector('.get-vacancy-button').inert = false
         } else {
             sliderItems[i].classList.remove('hover-slider__item--active')
             navItems[i].classList.remove('hover-slider-nav__item--active')
+            sliderItems[i].querySelector('.get-vacancy-button').inert = true
         }
     }
 }
