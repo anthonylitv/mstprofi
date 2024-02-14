@@ -158,7 +158,10 @@ const modals = document.querySelectorAll('.modal')
 const modalInner = document.querySelector('.modal__inner')
 const certificatsImage = document.querySelector('.certificats-modal__img')
 const certificats = document.querySelectorAll('.certificats__img')
-const formBannerButtons = document.querySelectorAll('.get-vacancy-button')
+const itemsForOpenFormBanner = [
+    ...document.querySelectorAll('.get-vacancy-button'),
+    ...document.querySelectorAll('.our-services-cards__item'),
+]
 const otherItems = document.querySelectorAll('[data-inert]')
 
 function openModal(modal) {
@@ -206,7 +209,7 @@ certificats.forEach(item => {
     })
 })
 
-formBannerButtons.forEach(item => {
+itemsForOpenFormBanner.forEach(item => {
     item.addEventListener('click', () => {
         const modal = document.querySelector('.modal[data-modal-form]')
         openModal(modal)
