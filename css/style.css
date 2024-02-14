@@ -243,9 +243,6 @@ body.lock {
 .navigation .header-language {
   display: none;
 }
-.navigation .header-language__items {
-  height: 300px;
-}
 
 .slider {
   position: relative;
@@ -566,6 +563,9 @@ body.lock {
   gap: 20px;
 }
 
+.form-modal {
+  overflow-y: auto;
+}
 .form-modal-inner {
   max-width: 560px;
   text-align: center;
@@ -575,12 +575,16 @@ body.lock {
 .form-modal-inner__img {
   max-width: 100%;
 }
-.form-modal-inner__h4 {
+.form-modal-inner-info {
+  padding: 40px 45px;
+}
+.form-modal-inner-info__h4 {
   font-size: 36px;
-  margin: 25px 0;
+}
+.form-modal-inner-info__p {
+  margin: 20px 0;
 }
 .form-modal-inner-form {
-  padding: 40px 45px;
   display: flex;
   flex-direction: column;
   gap: 20px;

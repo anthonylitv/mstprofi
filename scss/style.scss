@@ -278,10 +278,6 @@ body {
 
     .header-language {
         display: none;
-
-        &__items {
-            height: 300px;
-        }
     }
 }
 
@@ -627,25 +623,28 @@ body {
 }
 
 .form-modal {
+    overflow-y: auto;
     &-inner {
         max-width: 560px;
         text-align: center;
         font-size: 16px;
         background-color: black;
-
         &__img {
             max-width: 100%;
         }
-
-        &__h4 {
-            font-size: 36px;
-            margin: 25px 0;
-        }
-
-        &__p {
-        }
-        &-form {
+        &-info {
             padding: 40px 45px;
+
+            &__h4 {
+                font-size: 36px;
+            }
+
+            &__p {
+                margin: 20px 0;
+            }
+        }
+
+        &-form {
             display: flex;
             flex-direction: column;
             gap: 20px;

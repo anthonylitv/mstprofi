@@ -136,36 +136,43 @@
   .navigation .header-language {
     display: block;
   }
+  .navigation .header-language__items {
+    height: 300px;
+  }
 
   .form-modal .modal__close {
-    height: 60px;
+    background-color: black;
+    position: static;
     border-radius: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 100%;
   }
   .form-modal .modal__close svg {
+    width: 20px;
     fill: var(--text-color);
   }
   .form-modal-inner {
-    max-width: 100%;
-    max-height: 100%;
     text-align: center;
-    font-size: 16px;
     background-color: black;
   }
-  .form-modal-inner__h4 {
-    font-size: 29px;
-    margin: 20px 0 12px 0;
-  }
-  .form-modal-inner__p {
-    font-size: 12px;
-  }
-  .form-modal-inner-form {
+  .form-modal-inner-info {
     padding: 20px;
+  }
+  .form-modal-inner-info__h4 {
+    font-size: 29px;
+  }
+  .form-modal-inner-info__p {
+    font-size: 12px;
   }
   .form-modal-inner-form__input {
     height: 50px;
   }
   .form-modal.active {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .footer {
