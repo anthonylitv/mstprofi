@@ -179,15 +179,23 @@ function openModal(modal) {
     document.body.classList.add('lock')
     checkInertItems(true)
     modal.querySelector('form input')?.focus()
+
     document.addEventListener('keydown', handleKeyPress.bind(null, modal))
 }
 
 function closeModal(modal) {
     modal.classList.remove('active')
     document.body.classList.remove('lock')
+
     checkInertItems(false)
     document.removeEventListener('keydown', handleKeyPress.bind(null, modal))
+
+    focusedElementBeforeModal.tabIndex = -1
     focusedElementBeforeModal?.focus()
+    setTimeout(() => {
+        focusedElementBeforeModal?.blur()
+        focusedElementBeforeModal?.removeAttribute('tabIndex')
+    }, 0)
 }
 
 function checkModalClickForClose(modal) {
@@ -216,7 +224,13 @@ certificats.forEach(item => {
 itemsForOpenFormBanner.forEach(item => {
     item.addEventListener('click', () => {
         const modal = document.querySelector('.modal[data-modal-form]')
+
+        if (item.className !== 'get-vacancy-button') {
+            item.querySelector('.our-services-cards__item-button').focus()
+        }
+
         openModal(modal)
+
         checkModalClickForClose(modal)
     })
 })
