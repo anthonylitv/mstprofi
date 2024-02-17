@@ -584,6 +584,19 @@ body.lock {
 .form-modal-inner-info__p {
   margin: 20px 0;
 }
+.form-modal-inner-info__successfully {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #62c584;
+  display: none;
+}
+.form-modal-inner-info.successfully-sent-form .form-modal-inner-form {
+  display: none;
+}
+.form-modal-inner-info.successfully-sent-form .form-modal-inner-info__successfully {
+  display: block;
+}
 .form-modal-inner-form {
   display: flex;
   flex-direction: column;

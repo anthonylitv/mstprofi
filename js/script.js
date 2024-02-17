@@ -246,3 +246,14 @@ function checkInertItems(isInert) {
         otherItems[i].inert = isInert
     }
 }
+
+//Form Send Successfully
+
+const form = document.querySelector('.form-modal-inner-form')
+const allInfo = document.querySelector('.form-modal-inner-info')
+
+form.addEventListener('submit', event => {
+    event.preventDefault()
+
+    allInfo.classList.add('successfully-sent-form')
+})

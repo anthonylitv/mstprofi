@@ -205,6 +205,12 @@ const homeTexts = {
         ua: 'Ваш номер телефону',
         ru: 'Ваш номер телефона',
     },
+    'form-modal-inner-form__correctly-input-empty': {
+        pl: 'Pole obowiązkowe',
+        en: 'Obligatory field',
+        ua: "Обов'язкове поле",
+        ru: 'Обязательное поле',
+    },
 }
 
 // Checking the site page path
@@ -298,3 +304,30 @@ function checkBrowserLang() {
         return navLang
     }
 }
+
+//Validation form
+
+// const inputName = document.querySelector('#input-name')
+// const inputPhone = document.querySelector('#input-phone')
+
+// const notCorrectInputName = document.querySelector(
+//     '.form-modal-inner-form__correctly-input-name'
+// )
+// const notCorrectInputPhone = document.querySelector(
+//     '.form-modal-inner-form__correctly-input-phone'
+// )
+
+// const inputs = [inputName, inputPhone]
+
+// const form = document.querySelector('.form-modal-inner-form')
+
+// form.addEventListener('submit', event => {
+//     event.preventDefault()
+
+//     inputs.forEach(input => {
+//         const notCorrectSpanInfo = input.nextElementSibling
+//         if (input.value.length === 0) {
+//             notCorrectSpanInfo.textContent = 'Pole obowiązkowe'
+//         }
+//     })
+// })

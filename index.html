@@ -584,12 +584,18 @@
                     </p>
                     <form class="form-modal-inner-form" action="">
                         <input
+                            id="input-name"
                             class="form-modal-inner-form__input"
                             placeholder="Twoje imię"
                             type="text"
                             data-lang="form-modal-inner-form__input-1"
                         />
+                        <span
+                            class="form-modal-inner-form__correctly-input-name"
+                            data-lang="form-modal-inner-form__correctly-input-empty"
+                        ></span>
                         <input
+                            id="input-phone"
                             class="form-modal-inner-form__input"
                             placeholder="Twój numer telefonu"
                             type="tel"
@@ -597,7 +603,10 @@
                             id="telF"
                             data-lang="form-modal-inner-form__input-2"
                         />
-
+                        <span
+                            class="form-modal-inner-form__correctly-input-phone"
+                            data-lang="form-modal-inner-form__correctly-input-empty"
+                        ></span>
                         <button
                             class="form-modal-inner-form__submit-button"
                             type="submit"
@@ -606,6 +615,10 @@
                             Wysłać
                         </button>
                     </form>
+
+                    <div class="form-modal-inner-info__successfully">
+                        Dziękuję! Dane przesłane pomyślnie.
+                    </div>
                 </div>
             </div>
 

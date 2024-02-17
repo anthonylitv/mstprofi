@@ -642,6 +642,24 @@ body {
             &__p {
                 margin: 20px 0;
             }
+
+            &__successfully {
+                padding: 20px;
+                color: white;
+                font-size: 20px;
+                background-color: #62c584;
+                display: none;
+            }
+
+            &.successfully-sent-form {
+                .form-modal-inner-form {
+                    display: none;
+                }
+
+                .form-modal-inner-info__successfully {
+                    display: block;
+                }
+            }
         }
 
         &-form {
