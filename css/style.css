@@ -619,16 +619,35 @@ body.lock {
 .form-modal-inner-form__submit-button {
   cursor: pointer;
   background-color: var(--text-color);
-  padding: 19px 0;
+  height: 60px;
   color: black;
   border-radius: 50px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
 }
-.form-modal-inner-form__submit-button:hover {
+.form-modal-inner-form__submit-button-loader {
+  display: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid rgba(131, 131, 131, 0.8);
+  border-top: 2px solid black;
+  animation: loader 0.4s infinite linear;
+}
+.form-modal-inner-form__submit-button:not(.active):hover {
   background-color: #000;
   color: var(--text-color);
   border: 1px solid var(--text-color);
+}
+.form-modal-inner-form__submit-button.active {
+  cursor: auto;
+  background-color: #8e511f;
+}
+.form-modal-inner-form__submit-button.active .form-modal-inner-form__submit-button-text {
+  display: none;
+}
+.form-modal-inner-form__submit-button.active .form-modal-inner-form__submit-button-loader {
+  display: inline-block;
 }
 
 @keyframes arrow-forma {
@@ -640,5 +659,13 @@ body.lock {
   }
   100% {
     transform: translateY(20px);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

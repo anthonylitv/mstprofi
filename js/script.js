@@ -251,9 +251,16 @@ function checkInertItems(isInert) {
 
 const form = document.querySelector('.form-modal-inner-form')
 const allInfo = document.querySelector('.form-modal-inner-info')
+const submitButtonForLoader = document.querySelector(
+    '.form-modal-inner-form__submit-button'
+)
 
 form.addEventListener('submit', event => {
     event.preventDefault()
+    submitButtonForLoader.classList.add('active')
 
-    allInfo.classList.add('successfully-sent-form')
+    setTimeout(() => {
+        submitButtonForLoader.classList.remove('active')
+        allInfo.classList.add('successfully-sent-form')
+    }, 1000)
 })
