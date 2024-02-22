@@ -153,10 +153,10 @@ body.lock {
   background-color: #000;
 }
 .header-language .header-language__items .header-language__item {
+  display: block;
   border: 1px solid var(--text-color);
   cursor: pointer;
   padding: 8px 14px;
-  width: 100%;
   transition: background-color 0.3s ease;
 }
 .header-language .header-language__items .header-language__item:hover {

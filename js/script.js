@@ -9,12 +9,9 @@ const selects = document.querySelectorAll('.header-language')
 selects.forEach(select => {
     const selectItems = select.querySelectorAll('.header-language__item')
     const selectedItem = select.querySelector('.header-language__main-selected')
+    const userLanguage = window.location.pathname.replaceAll('/', '')
 
-    selectedItem.textContent = (
-        localStorage.getItem('language') ||
-        checkBrowserLang() ||
-        'pl'
-    ).toUpperCase()
+    selectedItem.textContent = userLanguage.toUpperCase()
 
     window.addEventListener('click', event => {
         if (!select.contains(event.target)) {
