@@ -439,8 +439,9 @@ body.lock {
 }
 .certificats .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .certificats .container .certificats__img {
   max-width: 49%;
