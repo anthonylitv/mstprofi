@@ -677,6 +677,28 @@ body.lock {
   display: inline-block;
 }
 
+.fixed-form-connection {
+  position: fixed;
+  z-index: 111;
+  bottom: 30px;
+  right: 30px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgb(26, 197, 26);
+  border-radius: 50%;
+  outline: 3px solid white;
+}
+.fixed-form-connection svg {
+  width: 40px;
+  fill: white;
+}
+.fixed-form-connection:hover {
+  background-color: rgb(24, 165, 24);
+}
+
 @keyframes arrow-forma {
   0% {
     transform: translateY(20px);

@@ -161,6 +161,7 @@ const certificats = document.querySelectorAll(".certificats__img");
 const itemsForOpenFormBanner = [
     ...document.querySelectorAll(".get-vacancy-button"),
     ...document.querySelectorAll(".our-services-cards__item"),
+    document.querySelector(".fixed-form-connection"),
 ];
 
 let focusedElementBeforeModal;
@@ -217,7 +218,7 @@ itemsForOpenFormBanner.forEach((item) => {
     item.addEventListener("click", () => {
         const modal = document.querySelector(".modal[data-modal-form]");
 
-        if (item.className !== "get-vacancy-button") {
+        if (item.className === "our-services-cards__item") {
             item.querySelector(".our-services-cards__item-button").focus();
         }
 
