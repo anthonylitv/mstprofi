@@ -7,11 +7,11 @@ window.onbeforeunload = function () {
 const selects = document.querySelectorAll(".header-language");
 
 selects.forEach((select) => {
-    const selectItems = select.querySelectorAll(".header-language__item");
     const selectedItem = select.querySelector(
         ".header-language__main-selected"
     );
     const userLanguage = window.location.pathname.replaceAll("/", "") || "PL";
+    console.log(userLanguage);
     selectedItem.textContent = userLanguage.toUpperCase();
 
     window.addEventListener("click", (event) => {
@@ -20,12 +20,6 @@ selects.forEach((select) => {
         } else {
             select.classList.toggle("open");
         }
-    });
-
-    selectItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            selectedItem.textContent = item.textContent;
-        });
     });
 });
 
