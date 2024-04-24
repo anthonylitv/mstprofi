@@ -592,10 +592,20 @@ body.lock {
   background-color: #62c584;
   display: none;
 }
+.form-modal-inner-info__not-successfully {
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #f95d51;
+  display: none;
+}
 .form-modal-inner-info.successfully-sent-form .form-modal-inner-form {
   display: none;
 }
 .form-modal-inner-info.successfully-sent-form .form-modal-inner-info__successfully {
+  display: block;
+}
+.form-modal-inner-info.not-successfully-sent-form .form-modal-inner-info__not-successfully {
   display: block;
 }
 .form-modal-inner-form {
@@ -604,10 +614,12 @@ body.lock {
   gap: 20px;
 }
 .form-modal-inner-form__input {
+  width: 100%;
   border: none;
   border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
   background-color: black;
+  margin-bottom: 5px;
   height: 60px;
 }
 .form-modal-inner-form__input:focus {
@@ -616,6 +628,20 @@ body.lock {
 }
 .form-modal-inner-form__input::placeholder {
   color: #5c3618;
+}
+.form-modal-inner-form__input.not-correct {
+  border: 1px solid red;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.form-modal-inner-form__correctly-input {
+  display: none;
+}
+.form-modal-inner-form__correctly-input.not-correct {
+  display: block;
+  font-size: 13px;
+  color: red;
+  text-align: left;
 }
 .form-modal-inner-form__submit-button {
   cursor: pointer;

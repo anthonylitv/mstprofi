@@ -475,26 +475,40 @@
                         Tobą!
                     </p>
                     <form class="form-modal-inner-form" action="">
-                        <input
-                            id="input-name"
-                            class="form-modal-inner-form__input"
-                            placeholder="Twoje imię"
-                            type="text"
-                        />
-                        <span
-                            class="form-modal-inner-form__correctly-input-name"
-                        ></span>
-                        <input
-                            id="input-phone"
-                            class="form-modal-inner-form__input"
-                            placeholder="Twój numer telefonu"
-                            type="tel"
-                            name="telefon"
-                            id="telF"
-                        />
-                        <span
-                            class="form-modal-inner-form__correctly-input-phone"
-                        ></span>
+                        <div class="form-modal-inner-form__input-block">
+                            <input
+                                id="input-name"
+                                class="form-modal-inner-form__input"
+                                placeholder="Twoje imię"
+                                type="text"
+                                maxlength="20"
+                            />
+                            <p
+                                id="form-modal-inner-form__correctly-input-name"
+                                class="form-modal-inner-form__correctly-input"
+                            >
+                                Pole obowiązkowe
+                            </p>
+                        </div>
+                        <div class="form-modal-inner-form__input-block">
+                            <input
+                                id="input-phone"
+                                class="form-modal-inner-form__input"
+                                placeholder="Twój numer telefonu"
+                                type="tel"
+                                name="telefon"
+                                maxlength="20"
+                            />
+                            <p
+                                id="form-modal-inner-form__correctly-input-phone"
+                                class="form-modal-inner-form__correctly-input"
+                            >
+                                Pole obowiązkowe
+                            </p>
+                        </div>
+                        <div class="form-modal-inner-info__not-successfully">
+                            Proszę wypełnić wszystkie wymagane pola
+                        </div>
                         <button
                             class="form-modal-inner-form__submit-button"
                             type="submit"

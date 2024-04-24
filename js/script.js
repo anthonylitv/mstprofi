@@ -247,63 +247,57 @@ const submitButtonForLoader = document.querySelector(
     ".form-modal-inner-form__submit-button"
 );
 
+const inputName = document.querySelector("#input-name");
+const inputPhone = document.querySelector("#input-phone");
+const inputs = [inputName, inputPhone];
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    submitButtonForLoader.classList.add("active");
 
-    // Замените 'YOUR_BOT_TOKEN' на реальный токен вашего бота
     const botToken = "6904558356:AAFfj-Rkeo_asYHqZrR1CCVUjvRiEjhiEMQ";
-    const chatId = "5856785440"; // Замените на реальный идентификатор чата
+    const chatId = "5856785440";
+    const message = `Новий клієнт
+    Ім'я: ${inputName.value}
+    Номер телефону: ${inputPhone.value}`;
 
-    const message = "Теест";
+    let correctFormsCount = 0;
 
-    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-        }),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log("Сообщение успешно отправлено в Telegram:", data);
-        })
-        .catch((error) => {
-            console.error("Ошибка при отправке сообщения в Telegram:", error);
+    inputs.forEach((input) => {
+        if (input.value.length === 0) {
+            allInfo.classList.add("not-successfully-sent-form");
+            input.classList.add("not-correct");
+            input.nextElementSibling.classList.add("not-correct");
+        } else {
+            input.classList.remove("not-correct");
+            input.nextElementSibling.classList.remove("not-correct");
+            correctFormsCount++;
+        }
+    });
+
+    if (correctFormsCount === inputs.length) {
+        allInfo.classList.remove("not-successfully-sent-form");
+        submitButtonForLoader.classList.add("active");
+        console.log(inputName.value, inputPhone.value);
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message,
+            }),
         });
 
-    setTimeout(() => {
-        submitButtonForLoader.classList.remove("active");
-        allInfo.classList.add("successfully-sent-form");
-    }, 1000);
+        setTimeout(() => {
+            submitButtonForLoader.classList.remove("active");
+            allInfo.classList.add("successfully-sent-form");
+        }, 1000);
+    }
 });
 
-//Validation form
-
-// const inputName = document.querySelector('#input-name')
-// const inputPhone = document.querySelector('#input-phone')
-
-// const notCorrectInputName = document.querySelector(
-//     '.form-modal-inner-form__correctly-input-name'
-// )
-// const notCorrectInputPhone = document.querySelector(
-//     '.form-modal-inner-form__correctly-input-phone'
-// )
-
-// const inputs = [inputName, inputPhone]
-
-// const form = document.querySelector('.form-modal-inner-form')
-
-// form.addEventListener('submit', event => {
-//     event.preventDefault()
-
-//     inputs.forEach(input => {
-//         const notCorrectSpanInfo = input.nextElementSibling
-//         if (input.value.length === 0) {
-//             notCorrectSpanInfo.textContent = 'Pole obowiązkowe'
-//         }
-//     })
-// })
+inputPhone.addEventListener("input", (event) => {
+    let inputValue = event.target.value;
+    inputValue = inputValue.replace(/[^0-9+]/g, "");
+    event.target.value = inputValue;
+});
