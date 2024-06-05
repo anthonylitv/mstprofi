@@ -573,8 +573,11 @@ body.lock {
   font-size: 16px;
   background-color: black;
 }
+.form-modal-inner .obolochka_for_image {
+  background-color: white;
+}
 .form-modal-inner__img {
-  max-width: 100%;
+  max-width: 30%;
 }
 .form-modal-inner-info {
   padding: 40px 45px;
@@ -682,8 +685,8 @@ body.lock {
   z-index: 111;
   bottom: 30px;
   right: 30px;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -692,7 +695,7 @@ body.lock {
   outline: 3px solid white;
 }
 .fixed-form-connection svg {
-  width: 40px;
+  width: 26px;
   fill: white;
 }
 .fixed-form-connection:hover {
