@@ -1,588 +1,526 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/normalize.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/responsive.css" />
-        <link
-            type="image/x-icon"
-            href="/images/shorticon.ico"
-            rel="shortcut icon"
-        />
-        <title>
-            MST Profi - Usługi spawalnicze - Outsourcing usługowy - Oursorcing
-            pracowniczy
-        </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      type="image/x-icon"
+      href="/images/shorticon.ico"
+      rel="shortcut icon"
+    />
+    <title>
+      MST Profi - Usługi spawalnicze - Outsourcing usługowy - Oursorcing
+      pracowniczy
+    </title>
 
-        <meta
-            name="description"
-            content="MST Profi Profesjonalne usługi spawalnicze na miarę Twoich potrzeb outsourcing pracowniczy dla Twojej firmy.
+    <meta
+      name="description"
+      content="MST Profi Profesjonalne usługi spawalnicze na miarę Twoich potrzeb outsourcing pracowniczy dla Twojej firmy.
         Kursy szkolenia spawaczy."
-        />
-        <meta
-            name="keywords"
-            content="Spawacz,polska,praca,robota,monterz,slusarz,malarz,szliferz,gdansk,bydgoszcz,torun,wroclaw,opole,rekrutacja,stocznia,delegacja,spawanie,tig,mig,mag,rury,blachy"
-        />
-    </head>
-    <body>
-        <header class="header" data-inert>
-            <div class="header-container">
-                <a href="#" class="header-logo">
-                    <img
-                        src="/images/shorticon.ico"
-                        alt="logo"
-                        class="header-logo__image"
-                    />
+    />
+    <meta
+      name="keywords"
+      content="Spawacz,polska,praca,robota,monterz,slusarz,malarz,szliferz,gdansk,bydgoszcz,torun,wroclaw,opole,rekrutacja,stocznia,delegacja,spawanie,tig,mig,mag,rury,blachy"
+    />
+  </head>
+  <body>
+    <header class="header" data-inert>
+      <div class="header-container">
+        <a href="#" class="header-logo">
+          <img
+            src="/images/shorticon.ico"
+            alt="logo"
+            class="header-logo__image"
+          />
 
-                    <h1 class="header-logo__text h1-size-text">
-                        MST
-                        <h1 class="header-logo__text-span h1-size-text">
-                            PROFI
-                        </h1>
-                    </h1>
-                </a>
+          <h1 class="header-logo__text h1-size-text">
+            MST
+            <h1 class="header-logo__text-span h1-size-text">PROFI</h1>
+          </h1>
+        </a>
 
-                <ul class="header-contacts">
-                    <a href="tel:+48790799270" class="header-contacts__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                        >
-                            <path
-                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                            />
-                        </svg>
-                        <span>+48 790 799 270</span>
-                    </a>
-
-                    <a href="tel:+48531584303" class="header-contacts__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                        >
-                            <path
-                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                            />
-                        </svg>
-                        <span>+48 531 584 303</span>
-                    </a>
-                </ul>
-                <div class="header-language">
-                    <button class="header-language__main">
-                        <span class="header-language__main-selected">PL</span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                        >
-                            <path
-                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                            />
-                        </svg>
-                    </button>
-                    <div class="header-language__items">
-                        <a href="/" class="header-language__item"> PL </a>
-                        <a href="/en/" class="header-language__item"> EN </a>
-                        <a href="/ua/" class="header-language__item"> UA </a>
-                    </div>
-                </div>
-
-                <button class="header__burger">
-                    <span></span>
-                </button>
-            </div>
-        </header>
-
-        <nav class="navigation" data-inert>
-            <a href="#about-us" class="navigation__item"> O nas </a>
-            <a href="#achievments" class="navigation__item"> Dlaczego my </a>
-            <a href="#our-services" class="navigation__item"> Usługi </a>
-
-            <div class="header-language">
-                <button class="header-language__main">
-                    <span class="header-language__main-selected">PL</span>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                        />
-                    </svg>
-                </button>
-                <div class="header-language__items">
-                    <a href="/index.html" class="header-language__item"> PL </a>
-                    <a href="/en/" class="header-language__item"> EN </a>
-                    <a href="/ua/" class="header-language__item"> UA </a>
-                </div>
-            </div>
-        </nav>
-
-        <section class="slider" data-inert>
-            <button
-                id="hover-slider-button-left"
-                class="hover-slider-buttons__item hover-slider-buttons__item-left"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                        d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-                    />
-                </svg>
-            </button>
-            <button
-                id="hover-slider-button-right"
-                class="hover-slider-buttons__item hover-slider-buttons__item-right"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-                    />
-                </svg>
-            </button>
-
-            <ul class="hover-slider">
-                <li class="hover-slider__item">
-                    <div class="hover-slider__item-information">
-                        <h1
-                            class="hover-slider__item-information-h1 h1-size-text"
-                        >
-                            SZUKAĆ PRACY?
-                        </h1>
-                        <p class="hover-slider__item-information-p p-size-text">
-                            Pracujemy w wielu regionach Polski
-                        </p>
-                        <button class="get-vacancy-button">
-                            Zdobądź pracę!
-                        </button>
-                    </div>
-
-                    <img
-                        class="hover-slider__item-img"
-                        src="/images/slide_1.jpg"
-                        alt="obraz suwaka 1"
-                    />
-                </li>
-                <li class="hover-slider__item">
-                    <div class="hover-slider__item-information">
-                        <h1
-                            class="hover-slider__item-information-h1 h1-size-text"
-                        >
-                            SZUKASZ PRACOWNIKÓW?
-                        </h1>
-                        <p class="hover-slider__item-information-p p-size-text">
-                            Najczęściej spotykane zawody: spawacz, monter,
-                            ślusarz, malarz
-                        </p>
-                        <button class="get-vacancy-button">
-                            Zdobądź pracę!
-                        </button>
-                    </div>
-
-                    <img
-                        class="hover-slider__item-img"
-                        src="/images/slide_3.jpg"
-                        alt="obraz suwaka 2"
-                    />
-                </li>
-                <li class="hover-slider__item">
-                    <div class="hover-slider__item-information">
-                        <h1
-                            class="hover-slider__item-information-h1 h1-size-text"
-                        >
-                            OFICJALNE ZATRUDNIENIE
-                        </h1>
-                        <p class="hover-slider__item-information-p p-size-text">
-                            Szybkie i wysokiej jakości przetwarzanie dokumentów
-                            do legalnego pobytu i pracy w Polsce
-                        </p>
-                        <button class="get-vacancy-button">
-                            Zdobądź pracę!
-                        </button>
-                    </div>
-
-                    <img
-                        class="hover-slider__item-img"
-                        src="/images/slide_2.jpg"
-                        alt="obraz suwaka 3"
-                    />
-                </li>
-            </ul>
-
-            <div class="hover-slider-nav">
-                <button class="hover-slider-nav__item"></button>
-                <button class="hover-slider-nav__item"></button>
-                <button class="hover-slider-nav__item"></button>
-            </div>
-        </section>
-
-        <section class="about-us sections" id="about-us" data-inert>
-            <div class="container">
-                <div class="about-us-block">
-                    <div class="about-us-block__info">
-                        <h2 class="about-us-block__info-h2 h2-size-text">
-                            O nas
-                        </h2>
-                        <p class="about-us-block__info-p p-size-text">
-                            Nasza firma z sukcesem działa od 2021 roku na
-                            terenie całej Polski, pomagając osobom z Ukrainy,
-                            Białorusi, Indonezji, Mołdawii, Indii, Filipin i
-                            krajów afrykańskich w znalezieniu pracy w branży
-                            obróbki metali. Nasz zespół odpowiedzialnie i
-                            rzetelnie wykonuje wszystkie powierzone zadania,
-                            preferując doświadczonych specjalistów,
-                            posiadających odpowiednie kwalifikacje. Nasza
-                            głęboka wiedza i bogate doświadczenie pozwalają nam
-                            spełniać wszelkie wymagania prawne i standardy
-                            bezpieczeństwa. Dbamy o to, aby nasi pracownicy
-                            czuli się komfortowo i bezpiecznie przez cały okres
-                            współpracy.
-                        </p>
-                    </div>
-                    <img
-                        src="/images/about-us.png"
-                        class="about-us-block__img"
-                        draggable="false"
-                    />
-                </div>
-            </div>
-        </section>
-
-        <section class="achievments sections" id="achievments" data-inert>
-            <div class="container">
-                <h2 class="achievments__h2 h2-size-text">Nasze osiągnięcia</h2>
-                <ul class="achievments-list">
-                    <li class="achievments-list__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <path
-                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                            />
-                        </svg>
-                        <p class="achievments-list__item-text p-size-text">
-                            W okresie funkcjonowania firmy zatrudnialiśmy ponad
-                            1000 osób
-                        </p>
-                    </li>
-                    <li class="achievments-list__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <path
-                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                            />
-                        </svg>
-                        <p class="achievments-list__item-text p-size-text">
-                            Szybkie i wysokiej jakości przetwarzanie dokumentów
-                            do legalnego pobytu i pracy w Polsce
-                        </p>
-                    </li>
-                    <li class="achievments-list__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <path
-                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                            />
-                        </svg>
-                        <p class="achievments-list__item-text p-size-text">
-                            Mówimy po ukraińsku, polsku, angielsku, rosyjsku
-                        </p>
-                    </li>
-                    <li class="achievments-list__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <path
-                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                            />
-                        </svg>
-                        <p class="achievments-list__item-text p-size-text">
-                            Terminowe wypłaty wynagrodzeń oraz pełen pakiet
-                            ubezpieczeń zdrowotnych
-                        </p>
-                    </li>
-                    <li class="achievments-list__item">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <path
-                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                            />
-                        </svg>
-                        <p class="achievments-list__item-text p-size-text">
-                            Po ukończeniu kursu w naszej szkole spawalniczej
-                            będziesz gotowy do pracy jako wykwalifikowany
-                            spawacz
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="certificats sections">
-            <div class="container">
-                <img
-                    src="/images/cert1.png"
-                    alt="Certyfikat 1"
-                    class="certificats__img"
-                />
-                <img
-                    src="/images/cert2.png"
-                    alt="Certyfikat 2"
-                    class="certificats__img"
-                />
-                <img
-                    src="/images/cert3.png"
-                    alt="Certyfikat 3"
-                    class="certificats__img"
-                />
-            </div>
-            <div
-                role="dialog"
-                aria-modal="true"
-                class="certificats-modal modal"
-                data-modal-certificats
-            >
-                <img
-                    class="certificats-modal__img modal__inner"
-                    src=""
-                    alt="Certyfikat w powiększeniu"
-                />
-                <button class="modal__close">
-                    <svg viewBox="0 0 23 23" fill="none">
-                        <path
-                            d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
-                        ></path>
-                        <path
-                            d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
-                        ></path>
-                    </svg>
-                </button>
-            </div>
-        </section>
-
-        <section class="our-services sections" id="our-services" data-inert>
-            <div class="container">
-                <h2 class="our-services__h2 h2-size-text">Nasze Usługi</h2>
-                <ul class="our-services-cards">
-                    <li class="our-services-cards__item">
-                        <h4 class="our-services-cards__item-h4">Legalizacja</h4>
-                        <p class="our-services-cards__item-p p-size-text">
-                            Zapewniamy wszystkie niezbędne dokumenty związane z
-                            pobytem i legalną pracą Twoich pracowników. Jako
-                            nasz klient otrzymasz pełne wsparcie w procesie
-                            legalizacji pobytu i pracy cudzoziemców w Polsce i
-                            Unii Europejskiej. Zajmiemy się - wydawaniem
-                            zezwoleń na pracę dla cudzoziemców - dokumentację
-                            związaną z zatrudnieniem - zaświadczenie A1 dla
-                            pracownika delegowanego na terytorium innego państwa
-                            członkowskiego UE Dzięki naszemu doświadczeniu i
-                            znajomości przepisów, pomożemy Ci uporać się ze
-                            wszystkimi zawiłościami procedur administracyjnych.
-                        </p>
-                        <button class="our-services-cards__item-button">
-                            Więcej szczegółów
-                        </button>
-                    </li>
-                    <li class="our-services-cards__item">
-                        <h4 class="our-services-cards__item-h4">Rekrutacja</h4>
-                        <p class="our-services-cards__item-p p-size-text">
-                            Szukasz legalnej pracy za granicą? Pomożemy ci w
-                            tym! Nasza firma zapewnia kompleksowy proces
-                            rekrutacji, uwzględniający wszystkie aspekty, w tym
-                            legalność zatrudnienia. Gwarantujemy nie tylko
-                            profesjonalny dobór kandydatów, ale także pomoc w
-                            kwestiach adaptacji do nowego środowiska. Naszym
-                            celem jest zapewnienie Ci stabilnej i bezpiecznej
-                            pracy za granicą, abyś mógł zrealizować swój
-                            potencjał i odnieść sukces w swojej karierze. Nie
-                            trać możliwości, skontaktuj się z nami już dziś i
-                            otwórz nowe horyzonty dla swojego zawodowego i
-                            osobistego rozwoju!
-                        </p>
-                        <button class="our-services-cards__item-button">
-                            Więcej szczegółów
-                        </button>
-                    </li>
-                    <li class="our-services-cards__item">
-                        <h4 class="our-services-cards__item-h4">
-                            Kwalifikowany dobór personelu
-                        </h4>
-                        <p class="our-services-cards__item-p p-size-text">
-                            Nasza firma posiada znaczne doświadczenie w selekcji
-                            personelu w branży obróbki metali. Rozumiemy, że
-                            prace spawalnicze wymagają szczególnej uwagi dla
-                            detali oraz wysokiego poziomu biegłości. Dlatego
-                            nasi rekruterzy preferują kandydatów z odpowiednim
-                            doświadczeniem, kwalifikacjami i zawodowymi
-                            umiejętnościami w tym obszarze. Gwarantujemy, że
-                            każdy pracownik, którego polecamy, posiada nie tylko
-                            niezbędną wiedzę techniczną, ale także umiejętność
-                            pracy w warunkach wysokiego ciśnienia oraz
-                            spełniania wymagań bezpieczeństwa pracy
-                        </p>
-                        <button class="our-services-cards__item-button">
-                            Więcej szczegółów
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="countries sections" data-inert>
-            <h2 class="countries__h2 h2-size-text">Kraje partnerskie</h2>
-            <div class="container">
-                <div class="countries-list">
-                    <img src="/images/pl.png" alt="ua" /><img
-                        src="/images/ua.png"
-                        alt="pl"
-                    /><img src="/images/br.png" alt="br" /><img
-                        src="/images/eu.png"
-                        alt="eu"
-                    /><img src="/images/in.png" alt="in" /><img
-                        src="/images/ml.png"
-                        alt="ml"
-                    /><img src="/images/ph.png" alt="ph" />
-                </div>
-            </div>
-        </section>
-
-        <section class="forma" data-inert>
-            <span class="forma__overlay"></span>
-            <div class="forma-info">
-                <h1 class="forma-info__h1 h1-size-text">
-                    Zdobądź najbardziej aktualne oferty pracy!
-                </h1>
-                <p class="forma-info__p p-size-text">
-                    Wypełnij formularz, a my niezwłocznie się z Tobą
-                    skontaktujemy!
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path
-                        d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z"
-                    />
-                </svg>
-                <button class="get-vacancy-button">Zdobądź pracę!</button>
-            </div>
-        </section>
-
-        <footer class="footer sections" data-inert>
-            <div class="container">
-                <h4 class="footer__h4">© All Rights Reserved. MST Profi.</h4>
-
-                <div class="footer-contacts">
-                    <a href="tel:+48790799270">+48 790 799 270</a
-                    ><a href="tel:+48531584303">+48 531 584 303</a
-                    ><span>mstprofi.biuro@gmail.com</span>
-                </div>
-            </div>
-        </footer>
-
-        <div
-            role="dialog"
-            aria-modal="true"
-            class="form-modal modal"
-            data-modal-form
-        >
-            <div class="form-modal-inner modal__inner">
-                <div class="obolochka_for_image">
-                    <img
-                        src="/images/form-banner.png"
-                        alt="Transparent"
-                        class="form-modal-inner__img"
-                    />
-                </div>
-
-                <div class="form-modal-inner-info">
-                    <h4 class="form-modal-inner-info__h4">
-                        Bądźmy w kontakcie!
-                    </h4>
-                    <p class="form-modal-inner-info__p">
-                        Wypełnij poniższy formularz, a my skontaktujemy się z
-                        Tobą!
-                    </p>
-                    <form class="form-modal-inner-form" action="">
-                        <div class="form-modal-inner-form__input-block">
-                            <input
-                                id="input-name"
-                                class="form-modal-inner-form__input"
-                                placeholder="Twoje imię"
-                                type="text"
-                                maxlength="20"
-                            />
-                            <p
-                                id="form-modal-inner-form__correctly-input-name"
-                                class="form-modal-inner-form__correctly-input"
-                            >
-                                Pole obowiązkowe
-                            </p>
-                        </div>
-                        <div class="form-modal-inner-form__input-block">
-                            <input
-                                id="input-phone"
-                                class="form-modal-inner-form__input"
-                                placeholder="Twój numer telefonu"
-                                type="tel"
-                                name="telefon"
-                                maxlength="20"
-                            />
-                            <p
-                                id="form-modal-inner-form__correctly-input-phone"
-                                class="form-modal-inner-form__correctly-input"
-                            >
-                                Pole obowiązkowe
-                            </p>
-                        </div>
-                        <div class="form-modal-inner-info__not-successfully">
-                            Proszę wypełnić wszystkie wymagane pola
-                        </div>
-                        <button
-                            class="form-modal-inner-form__submit-button"
-                            type="submit"
-                        >
-                            <span
-                                class="form-modal-inner-form__submit-button-text"
-                                >Wysłać</span
-                            >
-                            <span
-                                class="form-modal-inner-form__submit-button-loader"
-                            ></span>
-                        </button>
-                    </form>
-
-                    <div class="form-modal-inner-info__successfully">
-                        Dziękuję! Dane przesłane pomyślnie.
-                    </div>
-                </div>
-            </div>
-
-            <button class="modal__close">
-                <svg viewBox="0 0 23 23" fill="none">
-                    <path
-                        d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
-                    ></path>
-                    <path
-                        d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
-                    ></path>
-                </svg>
-            </button>
-        </div>
-
-        <div class="fixed-form-connection">
+        <ul class="header-contacts">
+          <a href="tel:+48790799270" class="header-contacts__item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
-                />
+              <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+              />
             </svg>
-        </div>
-    </body>
+            <span>+48 790 799 270</span>
+          </a>
 
-    <script src="/js/script.js"></script>
+          <a href="tel:+48531584303" class="header-contacts__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+              />
+            </svg>
+            <span>+48 531 584 303</span>
+          </a>
+        </ul>
+        <div class="header-language">
+          <button class="header-language__main">
+            <span class="header-language__main-selected">PL</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+              />
+            </svg>
+          </button>
+          <div class="header-language__items">
+            <a href="/" class="header-language__item"> PL </a>
+            <a href="/en/" class="header-language__item"> EN </a>
+            <a href="/ua/" class="header-language__item"> UA </a>
+          </div>
+        </div>
+
+        <button class="header__burger">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="navigation" data-inert>
+      <a href="#about-us" class="navigation__item"> O nas </a>
+      <a href="#achievments" class="navigation__item"> Dlaczego my </a>
+      <a href="#our-services" class="navigation__item"> Usługi </a>
+
+      <div class="header-language">
+        <button class="header-language__main">
+          <span class="header-language__main-selected">PL</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+            />
+          </svg>
+        </button>
+        <div class="header-language__items">
+          <a href="/index.html" class="header-language__item"> PL </a>
+          <a href="/en/" class="header-language__item"> EN </a>
+          <a href="/ua/" class="header-language__item"> UA </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="slider" data-inert>
+      <button
+        id="hover-slider-button-left"
+        class="hover-slider-buttons__item hover-slider-buttons__item-left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          />
+        </svg>
+      </button>
+      <button
+        id="hover-slider-button-right"
+        class="hover-slider-buttons__item hover-slider-buttons__item-right"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+          />
+        </svg>
+      </button>
+
+      <ul class="hover-slider">
+        <li class="hover-slider__item">
+          <div class="hover-slider__item-information">
+            <h1 class="hover-slider__item-information-h1 h1-size-text">
+              SZUKASZ PRACY?
+            </h1>
+            <p class="hover-slider__item-information-p p-size-text">
+              Pracujemy w wielu regionach Polski
+            </p>
+            <button class="get-vacancy-button">Zdobądź pracę!</button>
+          </div>
+
+          <img
+            class="hover-slider__item-img"
+            src="/images/slide_1.jpg"
+            alt="obraz suwaka 1"
+          />
+        </li>
+        <li class="hover-slider__item">
+          <div class="hover-slider__item-information">
+            <h1 class="hover-slider__item-information-h1 h1-size-text">
+              SZUKASZ PRACOWNIKÓW?
+            </h1>
+            <p class="hover-slider__item-information-p p-size-text">
+              Najczęściej spotykane zawody: spawacz, monter, ślusarz, malarz
+            </p>
+            <button class="get-vacancy-button">Zdobądź pracę!</button>
+          </div>
+
+          <img
+            class="hover-slider__item-img"
+            src="/images/slide_3.jpg"
+            alt="obraz suwaka 2"
+          />
+        </li>
+        <li class="hover-slider__item">
+          <div class="hover-slider__item-information">
+            <h1 class="hover-slider__item-information-h1 h1-size-text">
+              OFICJALNE ZATRUDNIENIE
+            </h1>
+            <p class="hover-slider__item-information-p p-size-text">
+              Szybkie i wysokiej jakości przetwarzanie dokumentów do legalnego
+              pobytu i pracy w Polsce
+            </p>
+            <button class="get-vacancy-button">Zdobądź pracę!</button>
+          </div>
+
+          <img
+            class="hover-slider__item-img"
+            src="/images/slide_2.jpg"
+            alt="obraz suwaka 3"
+          />
+        </li>
+      </ul>
+
+      <div class="hover-slider-nav">
+        <button class="hover-slider-nav__item"></button>
+        <button class="hover-slider-nav__item"></button>
+        <button class="hover-slider-nav__item"></button>
+      </div>
+    </section>
+
+    <section class="about-us sections" id="about-us" data-inert>
+      <div class="container">
+        <div class="about-us-block">
+          <div class="about-us-block__info">
+            <h2 class="about-us-block__info-h2 h2-size-text">O nas</h2>
+            <p class="about-us-block__info-p p-size-text">
+              Nasza firma działa z sukcesami od 2021 roku na terenie całej
+              Polski. Pomagamy osobom z Ukrainy, Białorusi, Indonezji, Mołdawii,
+              Indii, Filipin i krajów afrykańskich w znalezieniu pracy w branży
+              obróbki metali. Nasz zespół, składający się z doświadczonych
+              specjalistów, odpowiedzialnie i rzetelnie wykonuje wszystkie
+              powierzone przez klientów zadania. Wykwalifikowana kadra,
+              korzystając z szerokiej wiedzy i bogatego doświadczenia, spełnia
+              wszelkie wymagania prawne i standardy bezpieczeństwa. Dbamy o to,
+              aby nasi pracownicy czuli się komfortowo i bezpiecznie przez cały
+              okres współpracy z naszymi klientami.
+            </p>
+          </div>
+          <img
+            src="/images/about-us.png"
+            class="about-us-block__img"
+            draggable="false"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="achievments sections" id="achievments" data-inert>
+      <div class="container">
+        <h2 class="achievments__h2 h2-size-text">Nasze osiągnięcia</h2>
+        <ul class="achievments-list">
+          <li class="achievments-list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+              />
+            </svg>
+            <p class="achievments-list__item-text p-size-text">
+              W okresie funkcjonowania firmy zatrudniliśmy ponad 1000 osób
+            </p>
+          </li>
+          <li class="achievments-list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+              />
+            </svg>
+            <p class="achievments-list__item-text p-size-text">
+              Zapewniamy szybkie i wysokiej jakości przetwarzanie dokumentów
+              wymaganych do legalnego pobytu i pracy w Polsce
+            </p>
+          </li>
+          <li class="achievments-list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+              />
+            </svg>
+            <p class="achievments-list__item-text p-size-text">
+              Mówimy po ukraińsku, polsku, angielsku i rosyjsku
+            </p>
+          </li>
+          <li class="achievments-list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+              />
+            </svg>
+            <p class="achievments-list__item-text p-size-text">
+              Dajemy gwarancję terminowych wypłat wynagrodzeń oraz pełnego
+              pakietu ubezpieczeń zdrowotnych
+            </p>
+          </li>
+          <li class="achievments-list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+              />
+            </svg>
+            <p class="achievments-list__item-text p-size-text">
+              Oferujemy w naszej szkole kursy spawalnicze, po ukończeniu
+              których, będziesz gotowy do pracy jako wykwalifikowany spawacz.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="certificats sections">
+      <h2 class="certificats-h2 h2-size-text">Nasze certyfikaty</h2>
+      <div class="container">
+        <img
+          src="/images/cert1.png"
+          alt="Certyfikat 1"
+          class="certificats__img"
+        />
+        <img
+          src="/images/cert2.png"
+          alt="Certyfikat 2"
+          class="certificats__img"
+        />
+        <img
+          src="/images/cert3.png"
+          alt="Certyfikat 3"
+          class="certificats__img"
+        />
+      </div>
+      <div
+        role="dialog"
+        aria-modal="true"
+        class="certificats-modal modal"
+        data-modal-certificats
+      >
+        <img
+          class="certificats-modal__img modal__inner"
+          src=""
+          alt="Certyfikat w powiększeniu"
+        />
+        <button class="modal__close">
+          <svg viewBox="0 0 23 23" fill="none">
+            <path
+              d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
+            ></path>
+            <path
+              d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="our-services sections" id="our-services" data-inert>
+      <div class="container">
+        <h2 class="our-services__h2 h2-size-text">Nasze Usługi</h2>
+        <ul class="our-services-cards">
+          <li class="our-services-cards__item">
+            <h4 class="our-services-cards__item-h4">Legalizacja</h4>
+            <p class="our-services-cards__item-p p-size-text">
+              Zapewniamy wszystkie niezbędne dokumenty związane z pobytem i
+              legalną pracą Twoich pracowników. Jako nasz klient otrzymasz pełne
+              wsparcie w procesie legalizacji pobytu i pracy cudzoziemców w
+              Polsce i Unii Europejskiej.<br /><br />
+              Zajmiemy się:<br />
+              - wydawaniem zezwoleń na pracę dla cudzoziemców<br />
+              - ⁠komplementowaniem dokumentacji związanej z zatrudnieniem<br />
+              - ⁠zaświadczeniami A1 dla pracownika delegowanego na terytorium
+              innego państwa członkowskiego UE<br /><br />
+              Dzięki naszemu doświadczeniu i znajomości przepisów, pomożemy Ci
+              uporać się ze wszystkimi zawiłościami procedur administracyjnych.
+            </p>
+            <button class="our-services-cards__item-button">
+              Skontaktuj się z nami
+            </button>
+          </li>
+          <li class="our-services-cards__item">
+            <h4 class="our-services-cards__item-h4">Rekrutacja</h4>
+            <p class="our-services-cards__item-p p-size-text">
+              Szukasz legalnej pracy za granicą? Pomożemy ci w tym! Nasza firma
+              zapewnia kompleksowy proces rekrutacji, uwzględniający wszystkie
+              aspekty, w tym legalność zatrudnienia. Gwarantujemy nie tylko
+              profesjonalny dobór kandydatów na odpowiednie stanowiska, ale
+              także pomoc w kwestiach adaptacji do nowego środowiska. Naszym
+              celem jest zapewnienie Ci stabilnej i bezpiecznej pracy za
+              granicą, abyś mógł zrealizować swój potencjał i odniósł sukces w
+              swojej karierze. Nie strać możliwości, skontaktuj się z nami już
+              dziś i otwórz się na nowe horyzonty dla swojego zawodowego i
+              osobistego rozwoju!
+            </p>
+            <button class="our-services-cards__item-button">
+              Skontaktuj się z nami
+            </button>
+          </li>
+          <li class="our-services-cards__item">
+            <h4 class="our-services-cards__item-h4">
+              Kwalifikowany dobór personelu
+            </h4>
+            <p class="our-services-cards__item-p p-size-text">
+              Nasza firma posiada duże doświadczenie w selekcji personelu w
+              branży obróbki metali. Rozumiemy, że prace spawalnicze mają
+              wymagają szerokiego spektrum umiejętności. Dlatego nasi rekruterzy
+              dobierają kandydatów z odpowiednim doświadczeniem i kwalifikacjami
+              w tym obszarze. Gwarantujemy, że każdy pracownik, którego Tobie
+              polecimy, posiada nie tylko niezbędną wiedzę techniczną, ale także
+              umiejętność pracy w warunkach wysokiego ciśnienia oraz spełniania
+              wymagania bezpieczeństwa pracy.
+            </p>
+            <button class="our-services-cards__item-button">
+              Skontaktuj się z nami
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="countries sections" data-inert>
+      <h2 class="countries__h2 h2-size-text">Kraje partnerskie</h2>
+      <div class="container">
+        <div class="countries-list">
+          <img src="/images/pl.png" alt="ua" /><img
+            src="/images/ua.png"
+            alt="pl"
+          /><img src="/images/br.png" alt="br" /><img
+            src="/images/eu.png"
+            alt="eu"
+          /><img src="/images/in.png" alt="in" /><img
+            src="/images/ml.png"
+            alt="ml"
+          /><img src="/images/ph.png" alt="ph" />
+        </div>
+      </div>
+    </section>
+
+    <section class="forma" data-inert>
+      <span class="forma__overlay"></span>
+      <div class="forma-info">
+        <h1 class="forma-info__h1 h1-size-text">
+          Zdobądź najbardziej aktualne oferty pracy!
+        </h1>
+        <p class="forma-info__p p-size-text">
+          Wypełnij formularz, a my niezwłocznie się z Tobą skontaktujemy!
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z"
+          />
+        </svg>
+        <button class="get-vacancy-button">Zdobądź pracę!</button>
+      </div>
+    </section>
+
+    <footer class="footer sections" data-inert>
+      <div class="container">
+        <h4 class="footer__h4">© All Rights Reserved. MST Profi.</h4>
+
+        <div class="footer-contacts">
+          <span>sp.zoo ul. Wspólna 1/2 85-184 Bydgoszcz</span>
+          <a href="tel:+48790799270">+48 790 799 270</a
+          ><a href="tel:+48531584303">+48 531 584 303</a
+          ><span>mstprofi.biuro@gmail.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      class="form-modal modal"
+      data-modal-form
+    >
+      <div class="form-modal-inner modal__inner">
+        <div class="obolochka_for_image">
+          <img
+            src="/images/form-banner.png"
+            alt="Transparent"
+            class="form-modal-inner__img"
+          />
+        </div>
+
+        <div class="form-modal-inner-info">
+          <h4 class="form-modal-inner-info__h4">Bądźmy w kontakcie!</h4>
+          <p class="form-modal-inner-info__p">
+            Wypełnij poniższy formularz, a my skontaktujemy się z Tobą!
+          </p>
+          <form class="form-modal-inner-form" action="">
+            <div class="form-modal-inner-form__input-block">
+              <input
+                id="input-name"
+                class="form-modal-inner-form__input"
+                placeholder="Twoje imię"
+                type="text"
+                maxlength="20"
+              />
+              <p
+                id="form-modal-inner-form__correctly-input-name"
+                class="form-modal-inner-form__correctly-input"
+              >
+                Pole obowiązkowe
+              </p>
+            </div>
+            <div class="form-modal-inner-form__input-block">
+              <input
+                id="input-phone"
+                class="form-modal-inner-form__input"
+                placeholder="Twój numer telefonu"
+                type="tel"
+                name="telefon"
+                maxlength="20"
+              />
+              <p
+                id="form-modal-inner-form__correctly-input-phone"
+                class="form-modal-inner-form__correctly-input"
+              >
+                Pole obowiązkowe
+              </p>
+            </div>
+            <div class="form-modal-inner-info__not-successfully">
+              Proszę wypełnić wszystkie wymagane pola
+            </div>
+            <button class="form-modal-inner-form__submit-button" type="submit">
+              <span class="form-modal-inner-form__submit-button-text"
+                >Wysłać</span
+              >
+              <span class="form-modal-inner-form__submit-button-loader"></span>
+            </button>
+          </form>
+
+          <div class="form-modal-inner-info__successfully">
+            Dziękuję! Dane przesłane pomyślnie.
+          </div>
+        </div>
+      </div>
+
+      <button class="modal__close">
+        <svg viewBox="0 0 23 23" fill="none">
+          <path
+            d="M1.41421 -0.000151038L0 1.41406L21.2132 22.6273L22.6274 21.2131L1.41421 -0.000151038Z"
+          ></path>
+          <path
+            d="M22.6291 1.41421L21.2148 0L0.00164068 21.2132L1.41585 22.6274L22.6291 1.41421Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="fixed-form-connection">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+        />
+      </svg>
+    </div>
+  </body>
+
+  <script src="/js/script.js"></script>
 </html>

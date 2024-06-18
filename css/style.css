@@ -280,7 +280,7 @@ body.lock {
 .slider .hover-slider__item-information-p {
   text-align: center;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 50px;
   max-width: 50%;
 }
@@ -436,6 +436,9 @@ body.lock {
                 min(1px, (100vw - 320px) / 1360)
         );
   fill: var(--text-color);
+}
+.certificats-h2 {
+  text-align: center;
 }
 .certificats .container {
   display: flex;

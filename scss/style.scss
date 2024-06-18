@@ -69,6 +69,7 @@ body {
 .p-size-text {
     @include adaptiv-value("font-size", 20, 16, 0);
     line-height: 1.55;
+
 }
 
 .modal {
@@ -318,7 +319,7 @@ body {
                 &-p {
                     text-align: center;
                     line-height: 2;
-                    font-weight: 300;
+                    font-weight: 500;
                     margin-bottom: 50px;
                     max-width: 50%;
                 }
@@ -485,6 +486,9 @@ body {
 }
 
 .certificats {
+    &-h2{
+        text-align: center;
+    }
     .container {
         display: flex;
         justify-content: center;
